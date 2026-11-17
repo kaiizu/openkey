@@ -196,7 +196,7 @@ def _read_after_write(fn):
 
 
 class Handler(BaseHTTPRequestHandler):
-    server_version = "OpenKEY/1.2"
+    server_version = "OpenKEY/1.2.1"
 
     def log_message(self, fmt, *args):  # noqa: D401
         # Keep the console useful but not noisy. pythonw has no stderr, and

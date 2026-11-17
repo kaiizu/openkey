@@ -2758,7 +2758,7 @@ async function boot() {
     } catch {
       // The server may close the connection while shutting down.
     }
-    document.body.innerHTML = '<div class="closed-screen"><h2>OpenKEY se cerró</h2><p>Ya podés cerrar esta ventana.</p></div>';
+    document.body.innerHTML = '<div class="closed-screen"><h2>OpenKEY se cerró</h2><p>Ya puedes cerrar esta ventana.</p></div>';
   });
 
   await loadStatus(true);

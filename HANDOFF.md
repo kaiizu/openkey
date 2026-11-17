@@ -35,7 +35,7 @@
 > **Idioma y temas:** la UI tiene español (origen) e inglés (`web/i18n.js`, observer para textos dinámicos). En Ajustes se elige idioma y tema (`Grafito`, `Cobalto`, `Mercurio`). Las preferencias se guardan en `localStorage`; `?lang=en` y `?theme=cobalto` permiten previsualizar sin guardar.
 
 **Fecha:** 2026-11-17  
-**Estado:** v1.2 funcional, probada contra el teclado físico.  
+**Estado:** v1.2.1 funcional, probada contra el teclado físico.  
 **Para:** siguiente agente o colaborador que continúe el proyecto.
 
 ---

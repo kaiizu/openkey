@@ -166,7 +166,7 @@
     "Incluir Ctrl / Shift / Alt": "Include Ctrl / Shift / Alt",
     "Iniciar onda reactiva": "Start reactive ripple",
     "Detener": "Stop",
-    "Solo usa la posición física de la tecla pulsada; no registra ni guarda lo que escribís. Al detener se restaura tu iluminación anterior.": "It only uses the physical position of the pressed key; it does not record or store what you type. Stopping restores your previous lighting.",
+    "Solo usa la posición física de la tecla pulsada; no registra ni guarda lo que escribes. Al detener se restaura tu iluminación anterior.": "It only uses the physical position of the pressed key; it does not record or store what you type. Stopping restores your previous lighting.",
     "Lee el diseño guardado y pinta sobre la vista previa": "Read the saved layout and paint over the preview",
     "Sin leer": "Not read",
     "Pincel": "Brush",
@@ -215,7 +215,7 @@
     "Subir a la pantalla": "Upload to screen",
     "Quitar selección": "Clear selection",
     "Cargar patrón de prueba": "Load test pattern",
-    "Los GIF se envían completos y la pantalla los reproduce en bucle. Máximo 60 cuadros y 2 MB; si supera 1,5 MB podés comprimirlo o subirlo completo (más lento). Si supera 60 cuadros, podés comprimir la animación o usar los primeros 60. La subida puede tardar varios segundos por cuadro.": "GIFs are sent in full and loop on the screen. Max 60 frames and 2 MB; above 1.5 MB you can compress it or upload it in full (slower). Above 60 frames you can compress the animation or use the first 60. Upload can take several seconds per frame.",
+    "Los GIF se envían completos y la pantalla los reproduce en bucle. Máximo 60 cuadros y 2 MB; si supera 1,5 MB puedes comprimirlo o subirlo completo (más lento). Si supera 60 cuadros, puedes comprimir la animación o usar los primeros 60. La subida puede tardar varios segundos por cuadro.": "GIFs are sent in full and loop on the screen. Max 60 frames and 2 MB; above 1.5 MB you can compress it or upload it in full (slower). Above 60 frames you can compress the animation or use the first 60. Upload can take several seconds per frame.",
     "Reloj y reproducción": "Clock and playback",
     "La pantalla tiene un reloj interno. Sincronízalo con tu PC y elige si las páginas se quedan fijas o rotan solas.": "The screen has an internal clock. Sync it with your PC and choose whether pages stay fixed or rotate on their own.",
     "Sincronizar reloj": "Sync clock",
@@ -529,7 +529,7 @@
     [/^Grabando secuencia… \((\d+) eventos\)$/, "Recording… ($1 events)"],
     [/^Pintar (.+)$/, "Paint $1"],
     [/^(.+) → (.+)$/, (m, from, to) => `${translateCore(from)} → ${translateCore(to)}`],
-    [/^(\d+) teclas · (\d+) activas$/, "$1 keys · $2 active"],
+    [/^(\d+) teclas · (\d+) activas$/, (m, keys, active) => `${keys} ${keys === "1" ? "key" : "keys"} · ${active} active`],
     [/^Activo · (\d+) fps$/, "Active · $1 fps"],
     [/^Estática · (\d+)\/(\d+)$/, "Still · $1/$2"],
     [/^(\d+) resultado$/, "$1 result"],
@@ -537,6 +537,7 @@
     [/^Actual: (.+)$/, "Current: $1"],
     [/^Rueda · (.+)$/, "Knob · $1"],
     [/^(\d+) % de un núcleo$/, "$1% of one core"],
+    [/^(\d+)% de un núcleo$/, "$1% of one core"],
     [/^GIF de (\d+) cuadros$/, "GIF with $1 frames"],
     [/^Animación enviada \((\d+) cuadros\)\.$/, "Animation sent ($1 frames)."],
     [/^GIF comprimido a (\d+) cuadros para reducir el peso\.$/, "GIF compressed to $1 frames to reduce size."],
@@ -771,3 +772,4 @@
 
   window.OpenKEYi18n = { t, setLanguage, translateTree, getLanguage: () => lang };
 })();
+

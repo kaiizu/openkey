@@ -1,0 +1,1290 @@
+[
+  {
+    "value": "`",
+    "scanCode": 41,
+    "hidCode": 53,
+    "keyCode": 192,
+    "htmlCode": "Backquote"
+  },
+  {
+    "value": "1",
+    "scanCode": 2,
+    "hidCode": 30,
+    "keyCode": 49,
+    "htmlCode": "Digit1"
+  },
+  {
+    "value": "2",
+    "scanCode": 3,
+    "hidCode": 31,
+    "keyCode": 50,
+    "htmlCode": "Digit2"
+  },
+  {
+    "value": "3",
+    "scanCode": 4,
+    "hidCode": 32,
+    "keyCode": 51,
+    "htmlCode": "Digit3"
+  },
+  {
+    "value": "4",
+    "scanCode": 5,
+    "hidCode": 33,
+    "keyCode": 52,
+    "htmlCode": "Digit4"
+  },
+  {
+    "value": "5",
+    "scanCode": 6,
+    "hidCode": 34,
+    "keyCode": 53,
+    "htmlCode": "Digit5"
+  },
+  {
+    "value": "6",
+    "scanCode": 7,
+    "hidCode": 35,
+    "keyCode": 54,
+    "htmlCode": "Digit6"
+  },
+  {
+    "value": "7",
+    "scanCode": 8,
+    "hidCode": 36,
+    "keyCode": 55,
+    "htmlCode": "Digit7"
+  },
+  {
+    "value": "8",
+    "scanCode": 9,
+    "hidCode": 37,
+    "keyCode": 56,
+    "htmlCode": "Digit8"
+  },
+  {
+    "value": "9",
+    "scanCode": 10,
+    "hidCode": 38,
+    "keyCode": 57,
+    "htmlCode": "Digit9"
+  },
+  {
+    "value": "0",
+    "scanCode": 11,
+    "hidCode": 39,
+    "keyCode": 48,
+    "htmlCode": "Digit0"
+  },
+  {
+    "value": "-",
+    "scanCode": 12,
+    "hidCode": 45,
+    "keyCode": 189,
+    "htmlCode": "Minus"
+  },
+  {
+    "value": "=",
+    "scanCode": 13,
+    "hidCode": 46,
+    "keyCode": 187,
+    "htmlCode": "Equal"
+  },
+  {
+    "value": "__¥",
+    "scanCode": 125,
+    "hidCode": 137,
+    "keyCode": null,
+    "htmlCode": "IntlYen"
+  },
+  {
+    "value": "BackSpace",
+    "scanCode": 14,
+    "hidCode": 42,
+    "keyCode": 8,
+    "htmlCode": "Backspace"
+  },
+  {
+    "value": "Tab",
+    "scanCode": 15,
+    "hidCode": 43,
+    "keyCode": 9,
+    "htmlCode": "Tab"
+  },
+  {
+    "value": "Q",
+    "scanCode": 16,
+    "hidCode": 20,
+    "keyCode": 81,
+    "htmlCode": "KeyQ"
+  },
+  {
+    "value": "W",
+    "scanCode": 17,
+    "hidCode": 26,
+    "keyCode": 87,
+    "htmlCode": "KeyW"
+  },
+  {
+    "value": "E",
+    "scanCode": 18,
+    "hidCode": 8,
+    "keyCode": 69,
+    "htmlCode": "KeyE"
+  },
+  {
+    "value": "R",
+    "scanCode": 19,
+    "hidCode": 21,
+    "keyCode": 82,
+    "htmlCode": "KeyR"
+  },
+  {
+    "value": "T",
+    "scanCode": 20,
+    "hidCode": 23,
+    "keyCode": 84,
+    "htmlCode": "KeyT"
+  },
+  {
+    "value": "Y",
+    "scanCode": 21,
+    "hidCode": 28,
+    "keyCode": 89,
+    "htmlCode": "KeyY"
+  },
+  {
+    "value": "U",
+    "scanCode": 22,
+    "hidCode": 24,
+    "keyCode": 85,
+    "htmlCode": "KeyU"
+  },
+  {
+    "value": "I",
+    "scanCode": 23,
+    "hidCode": 12,
+    "keyCode": 73,
+    "htmlCode": "KeyI"
+  },
+  {
+    "value": "O",
+    "scanCode": 24,
+    "hidCode": 18,
+    "keyCode": 79,
+    "htmlCode": "KeyO"
+  },
+  {
+    "value": "P",
+    "scanCode": 25,
+    "hidCode": 19,
+    "keyCode": 80,
+    "htmlCode": "KeyP"
+  },
+  {
+    "value": "[",
+    "scanCode": 26,
+    "hidCode": 47,
+    "keyCode": 219,
+    "htmlCode": "BracketLeft"
+  },
+  {
+    "value": "]",
+    "scanCode": 27,
+    "hidCode": 48,
+    "keyCode": 221,
+    "htmlCode": "BracketRight"
+  },
+  {
+    "value": "\\",
+    "scanCode": 43,
+    "hidCode": 49,
+    "keyCode": 220,
+    "htmlCode": "Backslash"
+  },
+  {
+    "value": "Caps Lock",
+    "scanCode": 58,
+    "hidCode": 57,
+    "keyCode": 20,
+    "htmlCode": "CapsLock"
+  },
+  {
+    "value": "A",
+    "scanCode": 30,
+    "hidCode": 4,
+    "keyCode": 65,
+    "htmlCode": "KeyA"
+  },
+  {
+    "value": "S",
+    "scanCode": 31,
+    "hidCode": 22,
+    "keyCode": 83,
+    "htmlCode": "KeyS"
+  },
+  {
+    "value": "D",
+    "scanCode": 32,
+    "hidCode": 7,
+    "keyCode": 68,
+    "htmlCode": "KeyD"
+  },
+  {
+    "value": "F",
+    "scanCode": 33,
+    "hidCode": 9,
+    "keyCode": 70,
+    "htmlCode": "KeyF"
+  },
+  {
+    "value": "G",
+    "scanCode": 34,
+    "hidCode": 10,
+    "keyCode": 71,
+    "htmlCode": "KeyG"
+  },
+  {
+    "value": "H",
+    "scanCode": 35,
+    "hidCode": 11,
+    "keyCode": 72,
+    "htmlCode": "KeyH"
+  },
+  {
+    "value": "J",
+    "scanCode": 36,
+    "hidCode": 13,
+    "keyCode": 74,
+    "htmlCode": "KeyJ"
+  },
+  {
+    "value": "K",
+    "scanCode": 37,
+    "hidCode": 14,
+    "keyCode": 75,
+    "htmlCode": "KeyK"
+  },
+  {
+    "value": "L",
+    "scanCode": 38,
+    "hidCode": 15,
+    "keyCode": 76,
+    "htmlCode": "KeyL"
+  },
+  {
+    "value": ";",
+    "scanCode": 39,
+    "hidCode": 51,
+    "keyCode": 186,
+    "htmlCode": "Semicolon"
+  },
+  {
+    "value": "'",
+    "scanCode": 40,
+    "hidCode": 52,
+    "keyCode": 222,
+    "htmlCode": "Quote"
+  },
+  {
+    "value": "__]",
+    "scanCode": 43,
+    "hidCode": 50,
+    "keyCode": null,
+    "htmlCode": "IntlRo"
+  },
+  {
+    "value": "Enter",
+    "scanCode": 28,
+    "hidCode": 40,
+    "keyCode": 13,
+    "htmlCode": "Enter"
+  },
+  {
+    "value": "Shift",
+    "scanCode": 42,
+    "hidCode": 225,
+    "keyCode": 16,
+    "htmlCode": "ShiftLeft"
+  },
+  {
+    "value": "L_\\",
+    "scanCode": 86,
+    "hidCode": 100,
+    "keyCode": 226,
+    "htmlCode": "IntlBackslash"
+  },
+  {
+    "value": "Z",
+    "scanCode": 44,
+    "hidCode": 29,
+    "keyCode": 90,
+    "htmlCode": "KeyZ"
+  },
+  {
+    "value": "X",
+    "scanCode": 45,
+    "hidCode": 27,
+    "keyCode": 88,
+    "htmlCode": "KeyX"
+  },
+  {
+    "value": "C",
+    "scanCode": 46,
+    "hidCode": 6,
+    "keyCode": 67,
+    "htmlCode": "KeyC"
+  },
+  {
+    "value": "V",
+    "scanCode": 47,
+    "hidCode": 25,
+    "keyCode": 86,
+    "htmlCode": "KeyV"
+  },
+  {
+    "value": "B",
+    "scanCode": 48,
+    "hidCode": 5,
+    "keyCode": 66,
+    "htmlCode": "KeyB"
+  },
+  {
+    "value": "B",
+    "scanCode": 48,
+    "hidCode": 5,
+    "keyCode": 66,
+    "htmlCode": "KeyB_index1"
+  },
+  {
+    "value": "N",
+    "scanCode": 49,
+    "hidCode": 17,
+    "keyCode": 78,
+    "htmlCode": "KeyN"
+  },
+  {
+    "value": "M",
+    "scanCode": 50,
+    "hidCode": 16,
+    "keyCode": 77,
+    "htmlCode": "KeyM"
+  },
+  {
+    "value": ",",
+    "scanCode": 51,
+    "hidCode": 54,
+    "keyCode": 188,
+    "htmlCode": "Comma"
+  },
+  {
+    "value": ".",
+    "scanCode": 52,
+    "hidCode": 55,
+    "keyCode": 190,
+    "htmlCode": "Period"
+  },
+  {
+    "value": "/",
+    "scanCode": 53,
+    "hidCode": 56,
+    "keyCode": 191,
+    "htmlCode": "Slash"
+  },
+  {
+    "value": "__\\",
+    "scanCode": 115,
+    "hidCode": 135,
+    "keyCode": 193,
+    "htmlCode": "R_IntlBackslash"
+  },
+  {
+    "value": "r_Shift",
+    "scanCode": 54,
+    "hidCode": 229,
+    "keyCode": 16,
+    "htmlCode": "ShiftRight"
+  },
+  {
+    "value": "Ctrl",
+    "scanCode": 29,
+    "hidCode": 224,
+    "keyCode": 17,
+    "htmlCode": "ControlLeft"
+  },
+  {
+    "value": "Alt",
+    "scanCode": 56,
+    "hidCode": 226,
+    "keyCode": 18,
+    "htmlCode": "AltLeft"
+  },
+  {
+    "value": "(space)",
+    "scanCode": 57,
+    "hidCode": 44,
+    "keyCode": 32,
+    "htmlCode": "Space"
+  },
+  {
+    "value": "r_Alt",
+    "scanCode": 3640,
+    "hidCode": 230,
+    "keyCode": 18,
+    "htmlCode": "AltRight"
+  },
+  {
+    "value": "r_Ctrl",
+    "scanCode": 3613,
+    "hidCode": 228,
+    "keyCode": 17,
+    "htmlCode": "ControlRight"
+  },
+  {
+    "value": "Insert",
+    "scanCode": 61010,
+    "hidCode": 73,
+    "keyCode": 45,
+    "htmlCode": "Insert"
+  },
+  {
+    "value": "Delete",
+    "scanCode": 61011,
+    "hidCode": 76,
+    "keyCode": 46,
+    "htmlCode": "Delete"
+  },
+  {
+    "value": "←",
+    "scanCode": 61003,
+    "hidCode": 80,
+    "keyCode": 37,
+    "htmlCode": "ArrowLeft"
+  },
+  {
+    "value": "Home",
+    "scanCode": 60999,
+    "hidCode": 74,
+    "keyCode": 36,
+    "htmlCode": "Home"
+  },
+  {
+    "value": "End",
+    "scanCode": 61007,
+    "hidCode": 77,
+    "keyCode": 35,
+    "htmlCode": "End"
+  },
+  {
+    "value": "↑",
+    "scanCode": 61000,
+    "hidCode": 82,
+    "keyCode": 38,
+    "htmlCode": "ArrowUp"
+  },
+  {
+    "value": "↓",
+    "scanCode": 61008,
+    "hidCode": 81,
+    "keyCode": 40,
+    "htmlCode": "ArrowDown"
+  },
+  {
+    "value": "Page\nUp",
+    "scanCode": 61001,
+    "hidCode": 75,
+    "keyCode": 33,
+    "htmlCode": "PageUp"
+  },
+  {
+    "value": "Page\nDown",
+    "scanCode": 61009,
+    "hidCode": 78,
+    "keyCode": 34,
+    "htmlCode": "PageDown"
+  },
+  {
+    "value": "→",
+    "scanCode": 61005,
+    "hidCode": 79,
+    "keyCode": 39,
+    "htmlCode": "ArrowRight"
+  },
+  {
+    "value": "Num\nLock",
+    "scanCode": 69,
+    "hidCode": 83,
+    "keyCode": 144,
+    "htmlCode": "NumLock"
+  },
+  {
+    "value": "num_7",
+    "scanCode": 71,
+    "hidCode": 95,
+    "keyCode": 103,
+    "htmlCode": "Numpad7"
+  },
+  {
+    "value": "num_Home",
+    "scanCode": 3655,
+    "hidCode": 74,
+    "keyCode": null,
+    "htmlCode": "NumpadHome"
+  },
+  {
+    "value": "num_4",
+    "scanCode": 75,
+    "hidCode": 92,
+    "keyCode": 100,
+    "htmlCode": "Numpad4"
+  },
+  {
+    "value": "num_←",
+    "scanCode": 57419,
+    "hidCode": 80,
+    "keyCode": 37,
+    "htmlCode": "NumpadLeft"
+  },
+  {
+    "value": "num_1",
+    "scanCode": 79,
+    "hidCode": 89,
+    "keyCode": 97,
+    "htmlCode": "Numpad1"
+  },
+  {
+    "value": "num_/",
+    "scanCode": 3637,
+    "hidCode": 84,
+    "keyCode": 111,
+    "htmlCode": "NumpadDivide"
+  },
+  {
+    "value": "num_8",
+    "scanCode": 72,
+    "hidCode": 96,
+    "keyCode": 104,
+    "htmlCode": "Numpad8"
+  },
+  {
+    "value": "num_↑",
+    "scanCode": 57416,
+    "hidCode": 82,
+    "keyCode": 38,
+    "htmlCode": "NumpadUp"
+  },
+  {
+    "value": "num_5",
+    "scanCode": 76,
+    "hidCode": 93,
+    "keyCode": 101,
+    "htmlCode": "Numpad5"
+  },
+  {
+    "value": "num_2",
+    "scanCode": 80,
+    "hidCode": 90,
+    "keyCode": 98,
+    "htmlCode": "Numpad2"
+  },
+  {
+    "value": "num_↓",
+    "scanCode": 57424,
+    "hidCode": 81,
+    "keyCode": 40,
+    "htmlCode": "NumpadDown"
+  },
+  {
+    "value": "num_0",
+    "scanCode": 82,
+    "hidCode": 98,
+    "keyCode": 96,
+    "htmlCode": "Numpad0"
+  },
+  {
+    "value": "num_*",
+    "scanCode": 55,
+    "hidCode": 85,
+    "keyCode": 106,
+    "htmlCode": "NumpadMultiply"
+  },
+  {
+    "value": "num_9",
+    "scanCode": 73,
+    "hidCode": 97,
+    "keyCode": 105,
+    "htmlCode": "Numpad9"
+  },
+  {
+    "value": "num_Pgup",
+    "scanCode": 3657,
+    "hidCode": 75,
+    "keyCode": 33,
+    "htmlCode": "NumpadPageUp"
+  },
+  {
+    "value": "num_6",
+    "scanCode": 77,
+    "hidCode": 94,
+    "keyCode": 102,
+    "htmlCode": "Numpad6"
+  },
+  {
+    "value": "num_→",
+    "scanCode": 57421,
+    "hidCode": 79,
+    "keyCode": 39,
+    "htmlCode": "NumpadRight"
+  },
+  {
+    "value": "num_3",
+    "scanCode": 81,
+    "hidCode": 91,
+    "keyCode": 99,
+    "htmlCode": "Numpad3"
+  },
+  {
+    "value": "num_Pgdn",
+    "scanCode": 3665,
+    "hidCode": 78,
+    "keyCode": 34,
+    "htmlCode": "NumpadPageDown"
+  },
+  {
+    "value": "num_.",
+    "scanCode": 83,
+    "hidCode": 99,
+    "keyCode": 110,
+    "htmlCode": "NumpadDecimal"
+  },
+  {
+    "value": "num_-",
+    "scanCode": 74,
+    "hidCode": 86,
+    "keyCode": 109,
+    "htmlCode": "NumpadSubtract"
+  },
+  {
+    "value": "num_+",
+    "scanCode": 78,
+    "hidCode": 87,
+    "keyCode": 107,
+    "htmlCode": "NumpadAdd"
+  },
+  {
+    "value": "num_Enter",
+    "scanCode": 3612,
+    "hidCode": 88,
+    "keyCode": 13,
+    "htmlCode": "NumpadEnter"
+  },
+  {
+    "value": "Esc",
+    "scanCode": 1,
+    "hidCode": 41,
+    "keyCode": 27,
+    "htmlCode": "Escape"
+  },
+  {
+    "value": "F1",
+    "scanCode": 59,
+    "hidCode": 58,
+    "keyCode": 112,
+    "htmlCode": "F1"
+  },
+  {
+    "value": "F2",
+    "scanCode": 60,
+    "hidCode": 59,
+    "keyCode": 113,
+    "htmlCode": "F2"
+  },
+  {
+    "value": "F3",
+    "scanCode": 61,
+    "hidCode": 60,
+    "keyCode": 114,
+    "htmlCode": "F3"
+  },
+  {
+    "value": "F4",
+    "scanCode": 62,
+    "hidCode": 61,
+    "keyCode": 115,
+    "htmlCode": "F4"
+  },
+  {
+    "value": "F5",
+    "scanCode": 63,
+    "hidCode": 62,
+    "keyCode": 116,
+    "htmlCode": "F5"
+  },
+  {
+    "value": "F6",
+    "scanCode": 64,
+    "hidCode": 63,
+    "keyCode": 117,
+    "htmlCode": "F6"
+  },
+  {
+    "value": "F7",
+    "scanCode": 65,
+    "hidCode": 64,
+    "keyCode": 118,
+    "htmlCode": "F7"
+  },
+  {
+    "value": "F8",
+    "scanCode": 66,
+    "hidCode": 65,
+    "keyCode": 119,
+    "htmlCode": "F8"
+  },
+  {
+    "value": "F9",
+    "scanCode": 67,
+    "hidCode": 66,
+    "keyCode": 120,
+    "htmlCode": "F9"
+  },
+  {
+    "value": "F10",
+    "scanCode": 68,
+    "hidCode": 67,
+    "keyCode": 121,
+    "htmlCode": "F10"
+  },
+  {
+    "value": "F11",
+    "scanCode": 87,
+    "hidCode": 68,
+    "keyCode": 122,
+    "htmlCode": "F11"
+  },
+  {
+    "value": "F12",
+    "scanCode": 88,
+    "hidCode": 69,
+    "keyCode": 123,
+    "htmlCode": "F12"
+  },
+  {
+    "value": "Print\nScreen",
+    "scanCode": 3639,
+    "hidCode": 70,
+    "keyCode": 44,
+    "htmlCode": "PrintScreen"
+  },
+  {
+    "value": "Scroll\nLock",
+    "scanCode": 70,
+    "hidCode": 71,
+    "keyCode": 145,
+    "htmlCode": "ScrollLock"
+  },
+  {
+    "value": "Pause",
+    "scanCode": 3653,
+    "hidCode": 72,
+    "keyCode": 19,
+    "htmlCode": "Pause"
+  },
+  {
+    "value": "Win",
+    "scanCode": 3675,
+    "hidCode": 227,
+    "keyCode": 91,
+    "htmlCode": "MetaLeft"
+  },
+  {
+    "value": "r_Win",
+    "scanCode": 3676,
+    "hidCode": 231,
+    "keyCode": 92,
+    "htmlCode": "MetaRight"
+  },
+  {
+    "value": "(Application)",
+    "scanCode": null,
+    "hidCode": 101,
+    "keyCode": 93,
+    "htmlCode": "ContextMenu"
+  },
+  {
+    "value": "No Transform(JP)",
+    "scanCode": 123,
+    "hidCode": 139,
+    "keyCode": 29,
+    "htmlCode": "NonConvert"
+  },
+  {
+    "value": "Transform(JP)",
+    "scanCode": 121,
+    "hidCode": 138,
+    "keyCode": 28,
+    "htmlCode": "Convert"
+  },
+  {
+    "value": "Kana",
+    "scanCode": 112,
+    "hidCode": 136,
+    "keyCode": null,
+    "htmlCode": "KanaMode"
+  },
+  {
+    "value": "fn",
+    "scanCode": 0,
+    "hidCode": 167837696,
+    "keyCode": null,
+    "htmlCode": "Fn"
+  },
+  {
+    "value": "Calculator",
+    "scanCode": null,
+    "hidCode": 50369025,
+    "keyCode": null,
+    "htmlCode": "LaunchCalculator"
+  },
+  {
+    "value": "U-",
+    "scanCode": null,
+    "hidCode": 50391552,
+    "keyCode": null,
+    "htmlCode": "AudioVolumeDown"
+  },
+  {
+    "value": "Music",
+    "scanCode": null,
+    "hidCode": 50365185,
+    "keyCode": null,
+    "htmlCode": "Music"
+  },
+  {
+    "value": "U+",
+    "scanCode": null,
+    "hidCode": 50391296,
+    "keyCode": null,
+    "htmlCode": "AudioVolumeUp"
+  },
+  {
+    "value": "Mute",
+    "scanCode": null,
+    "hidCode": 50389504,
+    "keyCode": null,
+    "htmlCode": "AudioVolumeMute"
+  },
+  {
+    "value": "Play",
+    "scanCode": null,
+    "hidCode": 50384128,
+    "keyCode": null,
+    "htmlCode": "MediaPlayPause"
+  },
+  {
+    "value": "Play",
+    "scanCode": null,
+    "hidCode": 50449664,
+    "keyCode": null,
+    "htmlCode": "MediaPlayPause"
+  },
+  {
+    "value": "Stop",
+    "scanCode": null,
+    "hidCode": 50378496,
+    "keyCode": null,
+    "htmlCode": "Stop"
+  },
+  {
+    "value": "narrow",
+    "scanCode": null,
+    "hidCode": 58157,
+    "keyCode": null,
+    "htmlCode": "BrowserZoomOut"
+  },
+  {
+    "value": "enlarge",
+    "scanCode": null,
+    "hidCode": 58158,
+    "keyCode": null,
+    "htmlCode": "BrowserZoomIn"
+  },
+  {
+    "value": "Prev",
+    "scanCode": null,
+    "hidCode": 50378240,
+    "keyCode": null,
+    "htmlCode": "MediaTrackPrevious"
+  },
+  {
+    "value": "Next",
+    "scanCode": null,
+    "hidCode": 50377984,
+    "keyCode": null,
+    "htmlCode": "MediaTrackNext"
+  },
+  {
+    "value": "",
+    "scanCode": -1,
+    "hidCode": -1,
+    "keyCode": null,
+    "htmlCode": ""
+  },
+  {
+    "value": "F13",
+    "scanCode": null,
+    "hidCode": 104,
+    "keyCode": null,
+    "htmlCode": "F13"
+  },
+  {
+    "value": "Powersave",
+    "scanCode": null,
+    "hidCode": 168558592,
+    "keyCode": null,
+    "htmlCode": "Powersave"
+  },
+  {
+    "value": "LEDBIRINC",
+    "scanCode": null,
+    "hidCode": 218235136,
+    "keyCode": null,
+    "htmlCode": "LEDBIRINC"
+  },
+  {
+    "value": "LEDBIRDEC",
+    "scanCode": null,
+    "hidCode": 218235392,
+    "keyCode": null,
+    "htmlCode": "LEDBIRDEC"
+  },
+  {
+    "value": "AI",
+    "scanCode": null,
+    "hidCode": 169345024,
+    "keyCode": null,
+    "htmlCode": "AI"
+  },
+  {
+    "value": "U+",
+    "scanCode": null,
+    "hidCode": 50391296,
+    "keyCode": null,
+    "htmlCode": "AudioVolumeUp_2"
+  },
+  {
+    "value": "Mute",
+    "scanCode": null,
+    "hidCode": 50389504,
+    "keyCode": null,
+    "htmlCode": "AudioVolumeMute_2"
+  },
+  {
+    "value": "U-",
+    "scanCode": null,
+    "hidCode": 50391552,
+    "keyCode": null,
+    "htmlCode": "AudioVolumeDown_2"
+  },
+  {
+    "value": "[",
+    "scanCode": 26,
+    "hidCode": 47,
+    "keyCode": 219,
+    "htmlCode": "BracketLeft_index1"
+  },
+  {
+    "value": "]",
+    "scanCode": 27,
+    "hidCode": 48,
+    "keyCode": 221,
+    "htmlCode": "BracketRight_index1"
+  },
+  {
+    "value": "←",
+    "scanCode": 61003,
+    "hidCode": 80,
+    "keyCode": 37,
+    "htmlCode": "ArrowLeft_index1"
+  },
+  {
+    "value": "→",
+    "scanCode": 61005,
+    "hidCode": 79,
+    "keyCode": 39,
+    "htmlCode": "ArrowRight_index1"
+  },
+  {
+    "value": "Space",
+    "scanCode": 57,
+    "hidCode": 44,
+    "keyCode": 32,
+    "htmlCode": "Space_index1"
+  },
+  {
+    "value": "I",
+    "scanCode": 23,
+    "hidCode": 12,
+    "keyCode": 73,
+    "htmlCode": "KeyI_index1"
+  },
+  {
+    "value": "Search",
+    "scanCode": null,
+    "hidCode": 50340098,
+    "keyCode": null,
+    "htmlCode": "Search"
+  },
+  {
+    "value": "Win_l",
+    "scanCode": null,
+    "hidCode": 58127,
+    "keyCode": null,
+    "htmlCode": "Win_l"
+  },
+  {
+    "value": "Open_website",
+    "scanCode": null,
+    "hidCode": 301989888,
+    "keyCode": null,
+    "htmlCode": "Open_website"
+  },
+  {
+    "value": "r_Fn",
+    "scanCode": 0,
+    "hidCode": 170131456,
+    "keyCode": null,
+    "htmlCode": "r_Fn"
+  },
+  {
+    "value": "ledMode1",
+    "scanCode": 0,
+    "hidCode": 218497024,
+    "keyCode": null,
+    "htmlCode": "ledMode1"
+  },
+  {
+    "value": "ledMode2",
+    "scanCode": 0,
+    "hidCode": 218497280,
+    "keyCode": null,
+    "htmlCode": "ledMode2"
+  },
+  {
+    "value": "F19",
+    "scanCode": 0,
+    "hidCode": 130,
+    "keyCode": null,
+    "htmlCode": "F19"
+  },
+  {
+    "value": "F20",
+    "scanCode": 0,
+    "hidCode": 131,
+    "keyCode": null,
+    "htmlCode": "F20"
+  },
+  {
+    "value": "F21",
+    "scanCode": 0,
+    "hidCode": 132,
+    "keyCode": null,
+    "htmlCode": "F21"
+  },
+  {
+    "value": "F22",
+    "scanCode": 0,
+    "hidCode": 133,
+    "keyCode": null,
+    "htmlCode": "F22"
+  },
+  {
+    "value": "F23",
+    "scanCode": 0,
+    "hidCode": 134,
+    "keyCode": null,
+    "htmlCode": "F23"
+  },
+  {
+    "value": "F24",
+    "scanCode": 0,
+    "hidCode": 135,
+    "keyCode": null,
+    "htmlCode": "F24"
+  },
+  {
+    "value": "Vol-Bri",
+    "scanCode": 0,
+    "hidCode": 168689664,
+    "keyCode": null,
+    "htmlCode": "Volume_Brightness"
+  },
+  {
+    "value": "LED_Mode",
+    "scanCode": 0,
+    "hidCode": 218169344,
+    "keyCode": null,
+    "htmlCode": "LED_Mode"
+  },
+  {
+    "value": "MIC",
+    "scanCode": 0,
+    "hidCode": 169869312,
+    "keyCode": null,
+    "htmlCode": "MIC"
+  },
+  {
+    "value": "Emoji",
+    "scanCode": 0,
+    "hidCode": 58163,
+    "keyCode": null,
+    "htmlCode": "Emoji"
+  },
+  {
+    "value": "Copy",
+    "scanCode": 0,
+    "hidCode": 57350,
+    "keyCode": null,
+    "htmlCode": "Copy"
+  },
+  {
+    "value": "Paste",
+    "scanCode": 0,
+    "hidCode": 57369,
+    "keyCode": null,
+    "htmlCode": "Paste"
+  },
+  {
+    "value": "SelectAll",
+    "scanCode": 0,
+    "hidCode": 57348,
+    "keyCode": null,
+    "htmlCode": "SelectAll"
+  },
+  {
+    "value": "Undo",
+    "scanCode": 0,
+    "hidCode": 57373,
+    "keyCode": null,
+    "htmlCode": "Undo"
+  },
+  {
+    "value": "Cut",
+    "scanCode": 0,
+    "hidCode": 57371,
+    "keyCode": null,
+    "htmlCode": "Cut"
+  },
+  {
+    "value": "Enter",
+    "scanCode": 28,
+    "hidCode": 40,
+    "keyCode": 13,
+    "htmlCode": "Enter_index1"
+  },
+  {
+    "value": "Backspace",
+    "scanCode": 14,
+    "hidCode": 42,
+    "keyCode": 8,
+    "htmlCode": "Backspace_index1"
+  },
+  {
+    "value": "Web",
+    "scanCode": 0,
+    "hidCode": 318767104,
+    "keyCode": null,
+    "htmlCode": "OpenWebsiteDriver"
+  },
+  {
+    "value": "DS1",
+    "scanCode": null,
+    "hidCode": 2,
+    "keyCode": null,
+    "htmlCode": "DS1"
+  },
+  {
+    "value": "DS2",
+    "scanCode": null,
+    "hidCode": 3,
+    "keyCode": null,
+    "htmlCode": "DS2"
+  },
+  {
+    "value": "LEDONOFF",
+    "scanCode": null,
+    "hidCode": 168361984,
+    "keyCode": null,
+    "htmlCode": "LEDONOFF"
+  },
+  {
+    "value": "Rt",
+    "scanCode": null,
+    "hidCode": 134218496,
+    "keyCode": null,
+    "htmlCode": "profile_loop"
+  },
+  {
+    "value": "OLED_FontColor",
+    "scanCode": null,
+    "hidCode": 185204992,
+    "keyCode": null,
+    "htmlCode": "OLED_FontColor"
+  },
+  {
+    "value": "OLED_BackColor",
+    "scanCode": null,
+    "hidCode": 185205248,
+    "keyCode": null,
+    "htmlCode": "OLED_BackColor"
+  },
+  {
+    "value": "OLED_Confirm",
+    "scanCode": null,
+    "hidCode": 185205504,
+    "keyCode": null,
+    "htmlCode": "OLED_Confirm"
+  },
+  {
+    "value": "WIN_L",
+    "scanCode": null,
+    "hidCode": 58127,
+    "keyCode": null,
+    "htmlCode": "WIN_L"
+  },
+  {
+    "value": "Ctrl_SHIFT_ESC",
+    "scanCode": null,
+    "hidCode": 14737705,
+    "keyCode": null,
+    "htmlCode": "Ctrl_SHIFT_ESC"
+  },
+  {
+    "value": "WIN_D",
+    "scanCode": null,
+    "hidCode": 58119,
+    "keyCode": null,
+    "htmlCode": "WIN_D"
+  },
+  {
+    "value": "WIN_E",
+    "scanCode": null,
+    "hidCode": 58120,
+    "keyCode": null,
+    "htmlCode": "WIN_E"
+  },
+  {
+    "value": "Ctrl_C",
+    "scanCode": null,
+    "hidCode": 57350,
+    "keyCode": null,
+    "htmlCode": "Ctrl_C"
+  },
+  {
+    "value": "Ctrl_V",
+    "scanCode": null,
+    "hidCode": 57369,
+    "keyCode": null,
+    "htmlCode": "Ctrl_V"
+  }
+]

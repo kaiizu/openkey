@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenKEY · AK820 Ultra</title>
+  <script>
+    (() => {
+      try {
+        const params = new URLSearchParams(location.search);
+        const savedTheme = localStorage.getItem("openkey.theme.v1");
+        const savedLang = localStorage.getItem("openkey.language.v1");
+        const theme = (params.get("theme") || savedTheme || "grafito").toLowerCase();
+        const lang = (params.get("lang") || savedLang || "es").toLowerCase();
+        document.documentElement.dataset.theme = ["grafito", "cobalto", "mercurio"].includes(theme) ? theme : "grafito";
+        document.documentElement.lang = lang === "en" ? "en" : "es";
+      } catch {
+        document.documentElement.dataset.theme = "grafito";
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/cobalto.css">
+  <link rel="stylesheet" href="/themes.css">
+  <link rel="icon" href="/logo.png" type="image/png">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">
+      <img class="brand-logo" src="/logo.png" alt="" width="40" height="40">
+      <div>
+        <div class="brand-name">OpenKEY</div>
+        <div class="brand-sub">Control de teclado</div>
+      </div>
+    </div>
+
+    <nav class="nav" aria-label="Navegación principal">
+      <button class="nav-item active" data-page="overview" aria-current="page">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><rect x="13" y="13" width="7" height="7" rx="1"/></svg>
+        <span>Resumen</span>
+      </button>
+      <span class="nav-heading">Personalizar</span>
+      <button class="nav-item" data-page="lighting">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6m-5 3h4M12 3a6 6 0 0 0-3.5 10.9c.6.4 1 1.1 1 1.9V16h5v-.2c0-.8.4-1.5 1-1.9A6 6 0 0 0 12 3Z"/></svg>
+        <span>Iluminación</span>
+      </button>
+      <button class="nav-item" data-page="music">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V5l10-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="16" cy="16" r="3"/></svg>
+        <span>Música</span>
+      </button>
+      <button class="nav-item" data-page="screen">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="m7 16 3-3 2 2 3-4 2 2M8 8h.01"/></svg>
+        <span>Pantalla</span>
+      </button>
+      <button class="nav-item" data-page="keys">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M6 10h.01M9 10h.01M12 10h.01M15 10h.01M18 10h.01M6 13h.01M9 13h.01M12 13h6M8 16h8"/></svg>
+        <span>Teclas</span>
+      </button>
+      <button class="nav-item" data-page="macros">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v3m0 12v3M3 12h3m12 0h3M6.3 6.3l2.1 2.1m7.2 7.2 2.1 2.1m0-11.4-2.1 2.1M8.4 15.6l-2.1 2.1"/><circle cx="12" cy="12" r="3"/></svg>
+        <span>Macros</span>
+      </button>
+      <span class="nav-heading">Dispositivo</span>
+      <button class="nav-item" data-page="settings">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/><circle cx="8" cy="7" r="2"/><circle cx="16" cy="12" r="2"/><circle cx="10" cy="17" r="2"/></svg>
+        <span>Ajustes</span>
+      </button>
+    </nav>
+
+    <div class="sidebar-foot">
+      <div class="sidebar-device">
+        <div class="sidebar-device-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M6 10h.01M9 10h.01M12 10h.01M15 10h.01M18 10h.01M6 13h.01M9 13h.01M12 13h6M8 16h8"/></svg></div>
+        <div class="sidebar-device-info"><strong>Mi teclado</strong><div id="connBadge" class="conn conn--off"><span class="dot"></span><span id="connText">Buscando teclado…</span></div></div>
+      </div>
+      <button id="reconnectBtn" class="ghost small">Reconectar</button>
+      <button id="shutdownBtn" class="ghost small">Cerrar OpenKEY</button>
+      <p class="hint">Cierra el driver oficial antes de aplicar cambios</p>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <h1 id="pageTitle">Resumen</h1>
+        <p id="pageSubtitle" class="subtitle">Todo lo importante del teclado, de un vistazo.</p>
+      </div>
+      <div class="top-actions">
+        <span id="devicePill" class="pill">Sin conexión</span>
+        <button id="refreshBtn" class="icon-btn" title="Actualizar estado">⟳</button>
+      </div>
+    </header>
+
+    <div id="offlineBanner" class="banner hidden">
+      <strong>Teclado no detectado.</strong>
+      <span>Conecta el X820 Ultra por USB o revisa que la app oficial no lo esté bloqueando.</span>
+      <button id="bannerReconnect" class="ghost small">Reintentar</button>
+    </div>
+
+    <!-- ============================== OVERVIEW ============================== -->
+    <section id="page-overview" class="page active">
+      <div class="hero card">
+        <div class="hero-main">
+          <span class="eyebrow">Attack Shark · AK820 Ultra</span>
+          <h2 id="heroName">X820 Ultra</h2>
+          <p id="heroDesc">Configura iluminación, pantalla y teclas desde tu equipo.</p>
+          <div class="hero-chips">
+            <span id="heroConn" class="chip">USB</span>
+            <span id="heroProfile" class="chip">Perfil 0</span>
+            <span id="heroRate" class="chip">— Hz</span>
+            <span id="heroDebounce" class="chip">Debounce —</span>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="hero-device"><div class="hero-keyboard" id="heroKeyboard"></div></div>
+        </div>
+      </div>
+
+      <div class="grid4">
+        <div class="stat card">
+          <span class="stat-label">Firmware</span>
+          <span id="statFirmware" class="stat-value">—</span>
+          <span class="stat-foot">USB / RF</span>
+        </div>
+        <div class="stat card">
+          <span class="stat-label">Pantalla</span>
+          <span id="statScreen" class="stat-value">128 × 128</span>
+          <span class="stat-foot">RGB565</span>
+        </div>
+        <div class="stat card">
+          <span class="stat-label">Luz activa</span>
+          <span id="statLight" class="stat-value">—</span>
+          <span class="stat-foot">principal</span>
+        </div>
+        <div class="stat card">
+          <span class="stat-label">Luz lateral</span>
+          <span id="statSideLight" class="stat-value">—</span>
+          <span class="stat-foot">tira lateral</span>
+        </div>
+      </div>
+
+      <div class="grid2">
+        <div class="card quick-card">
+          <div class="card-head">
+            <h3>Acciones rápidas</h3>
+          </div>
+          <div class="quick-grid">
+            <button class="quick" data-goto="lighting">
+              <span><strong>Cambiar iluminación</strong><small>Modo, color y brillo</small></span>
+            </button>
+            <button class="quick" data-goto="screen">
+              <span><strong>Subir una imagen</strong><small>128×128 en segundos</small></span>
+            </button>
+            <button class="quick" data-goto="keys">
+              <span><strong>Remapear teclas</strong><small>Capa base y capa 1</small></span>
+            </button>
+            <button class="quick" data-goto="settings">
+              <span><strong>Ajustar rendimiento</strong><small>Polling y debounce</small></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-head">
+            <h3>Estado del dispositivo</h3>
+            <span id="statusStamp" class="muted">—</span>
+          </div>
+          <dl class="kv">
+            <div><dt>Producto</dt><dd id="kvProduct">—</dd></div>
+            <div><dt>VID / PID</dt><dd id="kvVidPid">—</dd></div>
+            <div><dt>Versión OLED</dt><dd id="kvOled">—</dd></div>
+            <div><dt>Versión flash</dt><dd id="kvFlash">—</dd></div>
+            <div><dt>Sistema</dt><dd id="kvSystem">—</dd></div>
+            <div><dt>Ruta HID</dt><dd id="kvPath" class="mono ellipsis">—</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== LIGHTING ============================== -->
+    <section id="page-lighting" class="page">
+      <div class="subnav card" role="tablist" aria-label="Secciones de iluminación">
+        <div class="subnav-tabs" id="lightingTabs">
+          <button type="button" class="subnav-tab active" data-light-tab="effects" role="tab" aria-selected="true">
+            <span>Efectos del teclado</span>
+            <small>Principal y tira lateral</small>
+          </button>
+          <button type="button" class="subnav-tab" data-light-tab="ripple" role="tab" aria-selected="false">
+            <span>Onda reactiva · Water drop</span>
+            <small id="rippleTabBadge">Personalizada · 0x0F</small>
+          </button>
+          <button type="button" class="subnav-tab" data-light-tab="perkey" role="tab" aria-selected="false">
+            <span>Color por tecla</span>
+            <small>Mapa estático de 80 teclas</small>
+          </button>
+        </div>
+      </div>
+
+      <!-- SUB-VISTA 1: EFECTOS DEL TECLADO -->
+      <div id="lightingPaneEffects" class="light-pane active">
+        <div class="card lighting-workbench">
+          <div class="lighting-stage-col">
+            <div class="card-head">
+              <div>
+                <h3>Iluminación principal</h3>
+                <p id="previewMessage" class="muted">Simulación aproximada · no modifica el teclado</p>
+              </div>
+              <span id="mainLightRaw" class="muted mono">—</span>
+            </div>
+
+            <div class="lighting-keyboard" id="mainPreview" role="img" aria-label="Vista previa aproximada de la iluminación del teclado"></div>
+
+            <div class="lighting-stage-foot">
+              <div class="actions">
+                <button id="mainApply" class="primary">Aplicar iluminación</button>
+                <button id="mainReset" class="ghost">Leer del teclado</button>
+              </div>
+              <div class="local-preset-inline">
+                <span class="muted">Preajuste local:</span>
+                <button id="saveLightPreset" class="ghost small">Guardar</button>
+                <button id="loadLightPreset" class="ghost small" disabled>Cargar</button>
+              </div>
+            </div>
+
+            <details class="advanced preview-cal-details">
+              <summary>Calibrar velocidad de la simulación (<output id="previewScaleOut">2.60×</output>)</summary>
+              <label class="field preview-calibration">
+                <input type="range" id="previewScale" min="0.25" max="4" step="0.05" value="2.6">
+                <small class="muted">Solo ajusta la vista previa local; no cambia lo que se envía al teclado.</small>
+              </label>
+            </details>
+          </div>
+
+          <div class="lighting-controls-col">
+            <div class="effect-picker-head">
+              <div class="effect-picker-title">
+                <span>Efecto</span>
+                <div class="effect-cat-pills" id="effectCatPills" role="group" aria-label="Filtrar efectos por categoría">
+                  <button type="button" class="cat-pill active" data-cat="all">Todos</button>
+                  <button type="button" class="cat-pill" data-cat="static">Estáticos</button>
+                  <button type="button" class="cat-pill" data-cat="animated">Animados</button>
+                  <button type="button" class="cat-pill" data-cat="reactive">Al pulsar</button>
+                  <button type="button" class="cat-pill" data-cat="special">Especiales</button>
+                </div>
+              </div>
+              <select id="mainMode" class="visually-compact-select" aria-label="Modo de iluminación principal" tabindex="-1" aria-hidden="true"></select>
+            </div>
+
+            <div id="mainEffectGrid" class="effect-grid" role="listbox" aria-label="Efectos de iluminación"></div>
+
+            <p id="mainMusicNote" class="music-note hidden">Este modo depende del firmware. Para sincronización real con el audio de Windows usa la pestaña <strong>Música</strong>.</p>
+
+            <div class="lighting-params-grid">
+              <div class="param-box" id="mainColorBox">
+                <div class="param-box-head">
+                  <span>Color del efecto</span>
+                  <label class="inline-check" title="Alterna colores del arcoíris (Dazzle)">
+                    <input type="checkbox" id="mainDazzle">
+                    <span class="check-ui"></span>
+                    <span>Arcoíris (Dazzle)</span>
+                  </label>
+                </div>
+                <div class="color-wrap">
+                  <input type="color" id="mainColor" value="#ffffff">
+                  <input type="text" id="mainColorHex" class="mono" value="#FFFFFF" maxlength="7" spellcheck="false">
+                  <div class="color-swatches" id="mainColorSwatches" aria-label="Colores rápidos">
+                    <button type="button" data-hex="#00E5FF" style="--sw:#00E5FF" title="Cian"></button>
+                    <button type="button" data-hex="#9DC7A6" style="--sw:#9DC7A6" title="Salvia"></button>
+                    <button type="button" data-hex="#FFCF18" style="--sw:#FFCF18" title="Ámbar"></button>
+                    <button type="button" data-hex="#FF5D73" style="--sw:#FF5D73" title="Coral"></button>
+                    <button type="button" data-hex="#A78BFA" style="--sw:#A78BFA" title="Violeta"></button>
+                    <button type="button" data-hex="#FFFFFF" style="--sw:#FFFFFF" title="Blanco"></button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="param-box">
+                <label class="field compact-field" id="mainBrightField">
+                  <span>Brillo <output id="mainBrightOut">4</output> / 5</span>
+                  <input type="range" id="mainBright" min="0" max="5" step="1" value="4">
+                </label>
+                <label class="field compact-field" id="mainSpeedField">
+                  <span>Velocidad <output id="mainSpeedOut">2</output> / 4</span>
+                  <input type="range" id="mainSpeed" min="0" max="4" step="1" value="2">
+                </label>
+                <label class="field compact-field" id="mainOptionField">
+                  <span>Variante / dirección <output id="mainOptionOut">0</output></span>
+                  <input type="range" id="mainOption" min="0" max="15" step="1" value="0">
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card side-lighting-card">
+          <div class="side-lighting-left">
+            <div class="card-head">
+              <div>
+                <h3>Iluminación lateral</h3>
+                <p class="muted">Tira LED de los costados del teclado</p>
+              </div>
+              <span id="sideLightRaw" class="muted mono">—</span>
+            </div>
+            <div class="light-preview" id="sidePreview"><span></span></div>
+            <label class="field">
+              <span>Modo lateral</span>
+              <select id="sideMode"></select>
+            </label>
+            <p id="sideMusicNote" class="music-note hidden">Este modo depende del firmware.</p>
+            <div class="actions">
+              <button id="sideApply" class="primary">Aplicar lateral</button>
+              <button id="sideReset" class="ghost">Leer del teclado</button>
+            </div>
+          </div>
+
+          <div class="side-lighting-right">
+            <div class="field-row">
+              <label class="field color-field">
+                <span>Color</span>
+                <span class="color-wrap">
+                  <input type="color" id="sideColor" value="#ffffff">
+                  <input type="text" id="sideColorHex" class="mono" value="#FFFFFF" maxlength="7" spellcheck="false">
+                </span>
+              </label>
+              <label class="field check-field">
+                <span>Arcoíris (Dazzle)</span>
+                <input type="checkbox" id="sideDazzle">
+                <span class="check-ui"></span>
+              </label>
+            </div>
+
+            <div class="field-row">
+              <label class="field">
+                <span>Brillo <output id="sideBrightOut">4</output></span>
+                <input type="range" id="sideBright" min="0" max="5" step="1" value="4">
+              </label>
+              <label class="field">
+                <span>Velocidad <output id="sideSpeedOut">2</output></span>
+                <input type="range" id="sideSpeed" min="0" max="4" step="1" value="2">
+              </label>
+            </div>
+
+            <details class="advanced">
+              <summary>Variante avanzada</summary>
+              <label class="field">
+                <span>Opción / variante <output id="sideOptionOut">0</output></span>
+                <input type="range" id="sideOption" min="0" max="15" step="1" value="0">
+              </label>
+            </details>
+          </div>
+        </div>
+      </div>
+
+      <!-- SUB-VISTA 2: ONDA REACTIVA (WATER DROP) -->
+      <div id="lightingPaneRipple" class="light-pane">
+        <div class="grid2">
+          <div class="card">
+            <div class="card-head">
+              <div>
+                <h3>Onda reactiva · Water drop</h3>
+                <p class="muted">Anillos circulares suaves desde cada tecla que pulsas, enviados por <span class="mono">0x0F</span> sin escribir en flash.</p>
+              </div>
+              <span id="rippleStatusPill" class="pill off">Detenido</span>
+            </div>
+
+            <div id="rippleGrid" class="music-grid ripple-grid" aria-label="Vista previa 21 por 6 de la onda reactiva" title="Haz clic en cualquier celda para probar una onda ahí"></div>
+
+            <dl class="kv compact music-stats">
+              <div><dt>Estado</dt><dd id="rippleState">Detenido</dd></div>
+              <div><dt>Pulsaciones / ondas</dt><dd id="rippleKeys">0 teclas · 0 activas</dd></div>
+              <div><dt>Tiempo de envío HID</dt><dd id="rippleSendMs">—</dd></div>
+              <div><dt>CPU estimada</dt><dd id="rippleCpu">—</dd></div>
+            </dl>
+
+            <div class="actions">
+              <button id="rippleTestCenter" type="button" class="ghost small">Probar onda en el centro</button>
+              <button id="ripplePresetWaterDrop" type="button" class="ghost small">Cargar preset «Water drop»</button>
+              <button id="rippleApplyFirmware" type="button" class="secondary small" title="Guarda el modo Onda nativo (modo 5) en la memoria del teclado">Aplicar Onda del firmware (sin app)</button>
+            </div>
+            <p id="rippleError" class="music-error hidden" role="alert"></p>
+          </div>
+
+          <div class="card">
+            <div class="card-head">
+              <h3>Ajustes de la onda</h3>
+              <span class="chip">Preset Water drop</span>
+            </div>
+
+            <div class="field-row">
+              <label class="field">
+                <span>Modo de color</span>
+                <select id="rippleColorMode">
+                  <option value="fixed" selected>Color fijo</option>
+                  <option value="rainbow">Arcoíris por distancia</option>
+                  <option value="random">Color aleatorio por tecla</option>
+                </select>
+              </label>
+              <label class="field color-field">
+                <span>Color base</span>
+                <span class="color-wrap">
+                  <input type="color" id="rippleColor" value="#00e5ff">
+                  <input type="text" id="rippleColorHex" class="mono" value="#00E5FF" maxlength="7" spellcheck="false">
+                </span>
+              </label>
+            </div>
+
+            <div class="field-row">
+              <label class="field">
+                <span>Expansión <output id="rippleExpansionOut">1.0×</output></span>
+                <input type="range" id="rippleExpansion" min="0.4" max="2.5" step="0.05" value="1.0">
+              </label>
+              <label class="field">
+                <span>Duración <output id="rippleLifetimeOut">1.1 s</output></span>
+                <input type="range" id="rippleLifetime" min="0.4" max="3.0" step="0.05" value="1.1">
+              </label>
+            </div>
+
+            <div class="field-row">
+              <label class="field">
+                <span>Grosor del anillo <output id="rippleThicknessOut">0.60</output></span>
+                <input type="range" id="rippleThickness" min="0.25" max="2.0" step="0.05" value="0.6">
+              </label>
+              <label class="field">
+                <span>Radio máximo <output id="rippleRadiusOut">6</output></span>
+                <input type="range" id="rippleRadius" min="3" max="20" step="0.5" value="6">
+              </label>
+            </div>
+
+            <div class="field-row">
+              <label class="field">
+                <span>Cuadros por segundo</span>
+                <select id="rippleFps">
+                  <option value="15">15 fps · ligero</option>
+                  <option value="20">20 fps · equilibrado</option>
+                  <option value="30" selected>30 fps · máxima fluidez</option>
+                </select>
+              </label>
+              <label class="field check-field">
+                <span>Incluir Ctrl / Shift / Alt</span>
+                <input type="checkbox" id="rippleModifiers">
+                <span class="check-ui"></span>
+              </label>
+            </div>
+
+            <div class="actions">
+              <button id="rippleStart" type="button" class="primary">Iniciar onda reactiva</button>
+              <button id="rippleStop" type="button" class="ghost" disabled>Detener</button>
+            </div>
+            <p class="hint">Solo usa la posición física de la tecla pulsada; no registra ni guarda lo que escribís. Al detener se restaura tu iluminación anterior.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SUB-VISTA 3: COLOR POR TECLA -->
+      <div id="lightingPanePerKey" class="light-pane">
+        <div class="card color-editor">
+          <div class="card-head"><div><h3>Color por tecla</h3><p class="muted">Lee el diseño guardado y pinta sobre la vista previa</p></div><span id="colorEditorStatus" class="muted" role="status">Sin leer</span></div>
+          <div class="color-editor-toolbar">
+            <label class="inline-field"><span>Color</span><input id="paintColor" type="color" value="#9dc7a6"></label>
+            <button id="paintBrush" class="ghost small active" aria-pressed="true">Pincel</button>
+            <button id="paintErase" class="ghost small" aria-pressed="false">Apagar tecla</button>
+            <button id="paintFill" class="ghost small" disabled>Colorear todas</button>
+            <button id="paintRead" class="ghost small">Leer del teclado</button>
+          </div>
+          <div class="keyboard-wrap color-editor-stage">
+            <div id="colorKeyboard" class="keyboard" aria-label="Editor de color por tecla"></div>
+            <div id="colorEditorEmpty" class="color-editor-empty">Lee los colores actuales para comenzar</div>
+          </div>
+          <div class="actions"><button id="paintApply" class="primary" disabled>Aplicar colores</button></div>
+          <p class="hint color-editor-hint">La vista previa no cambia el teclado. Aplicar guarda los colores y activa el modo personalizado. Cierra el driver oficial antes de aplicar.</p>
+        </div>
+      </div>
+
+      <div class="card tips">
+        <strong>Nota</strong>
+        <p>Los efectos estándar y el mapa por tecla se guardan en el firmware del teclado. La onda reactiva personalizada («Water drop») transmite cuadros en tiempo real por USB mientras esté activa.</p>
+      </div>
+    </section>
+
+    <!-- ============================== MUSIC ============================== -->
+    <section id="page-music" class="page">
+      <div class="grid2">
+        <div class="card">
+          <div class="card-head">
+            <h3>Sincronización de audio</h3>
+            <span id="musicStatusPill" class="pill off">Detenido</span>
+          </div>
+          <p class="muted">Captura la salida de audio de Windows y envía colores al teclado en tiempo real. No se ejecuta nada hasta pulsar <strong>Iniciar</strong>.</p>
+
+          <label class="field">
+            <span>Fuente</span>
+            <select id="musicSource">
+              <option value="audio">Audio del sistema (salida predeterminada)</option>
+              <option value="demo">Demostración (sin audio)</option>
+            </select>
+          </label>
+
+          <div class="field-row">
+            <label class="field">
+              <span>Sensibilidad <output id="musicGainOut">10</output></span>
+              <input type="range" id="musicGain" min="1" max="20" step="1" value="10">
+            </label>
+            <label class="field">
+              <span>Frecuencia <output id="musicFpsOut">20</output> fps</span>
+              <select id="musicFps">
+                <option value="15">15 fps · mínimo consumo</option>
+                <option value="20" selected>20 fps · equilibrado</option>
+                <option value="30">30 fps · máxima fluidez</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="field-row">
+            <label class="field">
+              <span>Color</span>
+              <select id="musicMode">
+                <option value="spectrum">Espectro</option>
+                <option value="solid">Color fijo</option>
+              </select>
+            </label>
+            <label class="field color-field">
+              <span>Color fijo</span>
+              <span class="color-wrap"><input type="color" id="musicColor" value="#00ffff"></span>
+            </label>
+          </div>
+
+          <div class="actions">
+            <button id="musicStart" class="primary">Iniciar sincronización</button>
+            <button id="musicStop" class="ghost" disabled>Detener</button>
+          </div>
+          <p id="musicError" class="music-error hidden" role="alert"></p>
+        </div>
+
+        <div class="card">
+          <div class="card-head">
+            <h3>Vista previa</h3>
+            <span class="muted">21 × 6 · 0x0F</span>
+          </div>
+          <div id="musicGrid" class="music-grid" aria-label="Vista previa de la sincronización de audio"></div>
+          <dl class="kv compact music-stats">
+            <div><dt>Estado</dt><dd id="musicState">Detenido</dd></div>
+            <div><dt>Fuente</dt><dd id="musicFormat">—</dd></div>
+            <div><dt>CPU estimada</dt><dd id="musicCpu">—</dd></div>
+            <div><dt>RAM del proceso</dt><dd id="musicRam">—</dd></div>
+            <div><dt>Cuadros enviados</dt><dd id="musicFrames">—</dd></div>
+          </dl>
+          <p id="musicDetail" class="hint">Audio — · FFT — · HID —</p>
+        </div>
+      </div>
+
+      <div class="card tips">
+        <strong>Cómo funciona</strong>
+        <p>OpenKEY captura la mezcla de salida de Windows por WASAPI loopback, calcula una FFT de 1024 muestras y envía un frame RGB de 21×6 con el comando <span class="mono">0x0F</span>. Al detener, envía un frame negro y restaura el efecto que tenías.</p>
+        <p class="muted">Mientras está activa, la luz principal queda en modo Fijo y los frames toman el control. Consumo: el hilo solo existe entre «Iniciar» y «Detener». El envío HID es la parte más costosa; 15 fps reduce el consumo casi a la mitad. En esta máquina el proceso real midió ~8 % de un núcleo a 20 fps; la estimación mostrada es conservadora. Cierra el driver oficial antes de usar esta función.</p>
+      </div>
+    </section>
+
+    <!-- ============================== SCREEN ============================== -->
+    <section id="page-screen" class="page">
+      <div class="grid2">
+        <div class="card">
+          <div class="card-head">
+            <h3>Imagen de la pantalla</h3>
+            <span class="muted">128 × 128 · RGB565</span>
+          </div>
+
+          <label id="dropZone" class="dropzone" for="fileInput">
+            <input id="fileInput" type="file" accept="image/png,image/jpeg,image/webp,image/gif" hidden>
+            <div class="drop-inner">
+              <strong>Arrastra una imagen o GIF o haz clic</strong>
+              <small>PNG, JPG, WebP o GIF animado</small>
+            </div>
+          </label>
+
+          <div class="screen-preview-wrap">
+            <div class="screen-canvas-col">
+              <canvas id="screenCanvas" width="128" height="128"></canvas>
+              <div class="screen-playback" id="screenPlayback">
+                <button id="screenPrevFrame" type="button" class="ghost small" title="Cuadro anterior" disabled>◀</button>
+                <button id="screenTogglePlay" type="button" class="ghost small" disabled>Estática</button>
+                <button id="screenNextFrame" type="button" class="ghost small" title="Cuadro siguiente" disabled>▶</button>
+              </div>
+            </div>
+            <div class="screen-meta">
+              <div><span class="muted">Área</span><strong id="imgArea">—</strong></div>
+              <div><span class="muted">Datos</span><strong id="imgBytes">—</strong></div>
+              <div><span class="muted">Cuadros</span><strong id="imgFrames">—</strong></div>
+              <div><span class="muted">Duración</span><strong id="imgDuration">—</strong></div>
+              <div><span class="muted">Archivo</span><strong id="imgName" class="ellipsis" data-no-i18n>—</strong></div>
+            </div>
+          </div>
+
+          <div class="screen-transform-bar">
+            <div class="inline-field">
+              <span>Encuadre</span>
+              <div class="segmented" id="screenFitGroup">
+                <button type="button" class="active" data-fit="cover">Cubrir</button>
+                <button type="button" data-fit="contain">Ajustar</button>
+                <button type="button" data-fit="stretch">Estirar</button>
+              </div>
+            </div>
+            <div class="inline-field">
+              <span>Rotación</span>
+              <div class="segmented" id="screenRotateGroup">
+                <button type="button" class="active" data-rotate="0">0°</button>
+                <button type="button" data-rotate="90">90°</button>
+                <button type="button" data-rotate="180">180°</button>
+                <button type="button" data-rotate="270">270°</button>
+              </div>
+            </div>
+          </div>
+
+          <label class="inline-check screen-pin">
+            <input type="checkbox" id="screenPinPage" checked>
+            <span class="check-ui"></span>
+            <span>Mantener esta página después de subir</span>
+          </label>
+
+          <div class="actions">
+            <button id="uploadImage" class="primary" disabled>Subir a la pantalla</button>
+            <button id="clearImage" class="ghost">Quitar selección</button>
+            <button id="testScreen" type="button" class="ghost">Cargar patrón de prueba</button>
+          </div>
+          <div class="progress hidden" id="uploadProgress"><span></span></div>
+          <p class="hint">Los GIF se envían completos y la pantalla los reproduce en bucle. Máximo 60 cuadros y 2 MB; si supera 1,5 MB podés comprimirlo o subirlo completo (más lento). Si supera 60 cuadros, podés comprimir la animación o usar los primeros 60. La subida puede tardar varios segundos por cuadro.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-head">
+            <h3>Reloj y reproducción</h3>
+          </div>
+          <p class="muted">La pantalla tiene un reloj interno. Sincronízalo con tu PC y elige si las páginas se quedan fijas o rotan solas.</p>
+
+          <div class="actions vertical">
+            <button id="syncClock" class="primary">Sincronizar reloj</button>
+          </div>
+
+          <hr class="sep">
+
+          <div class="field">
+            <span>Modo de reproducción</span>
+            <div class="segmented" id="screenPlaybackMode">
+              <button type="button" class="active" data-playback="stay">Mantener página</button>
+              <button type="button" data-playback="cycle">Rotación automática</button>
+            </div>
+            <small class="muted">«Mantener página» deja visible la página actual; la rueda cambia de página al pulsarla. «Rotación automática» alterna las páginas cada N segundos: eso hace que un GIF vuelva solo a una imagen fija.</small>
+          </div>
+
+          <label class="field" id="screenCycleField" style="display:none">
+            <span>Intervalo de rotación <output id="menuSecondsOut">10</output> s</span>
+            <input type="range" id="menuSeconds" min="2" max="60" step="1" value="10">
+          </label>
+
+          <div class="actions">
+            <button id="applyPlayback" class="primary">Aplicar modo de reproducción</button>
+            <button id="stayOnPage" class="ghost" title="Fija la página actual para que no cambie sola">Fijar página ahora</button>
+          </div>
+
+          <div class="info-box" style="margin-top:16px">
+            <strong>¿El GIF vuelve solo a una imagen fija?</strong>
+            <p>Es el modo de <strong>rotación automática</strong> del firmware, no un fallo del GIF. Cambia a «Mantener página», o deja marcado «Mantener esta página después de subir»: OpenKEY enviará el ajuste después de cada subida y el GIF se quedará visible hasta que tú cambies de página con la rueda.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== KEYS ============================== -->
+    <section id="page-keys" class="page">
+      <div class="card toolbar">
+        <div class="toolbar-left">
+          <label class="inline-field">
+            <span>Perfil</span>
+            <select id="keyProfile">
+              <option value="0">0</option>
+              <option value="1">1</option>
+            </select>
+          </label>
+          <label class="inline-field">
+            <span>Capa</span>
+            <select id="keyLayer">
+              <option value="0">0 · base</option>
+              <option value="1">1 · alternativa</option>
+            </select>
+          </label>
+          <button id="reloadKeys" class="ghost small">Recargar</button>
+          <button id="exportKeysBtn" type="button" class="ghost small">Exportar respaldo JSON</button>
+          <button id="importKeysBtn" type="button" class="ghost small">Importar y restaurar JSON</button>
+          <input id="importKeysInput" type="file" accept="application/json,.json" hidden>
+        </div>
+        <div class="legend">
+          <span><i class="dot dot--default"></i>Original</span>
+          <span><i class="dot dot--changed"></i>Remapeada</span>
+          <span><i class="dot dot--macro"></i>Macro</span>
+          <span><i class="dot dot--off"></i>Desactivada</span>
+        </div>
+      </div>
+
+      <div class="keys-layout">
+        <div class="card keyboard-card">
+          <div class="keyboard-caption"><span>Distribución del teclado</span><span>Las teclas reaccionan mientras esta ventana está activa</span></div>
+          <div class="keyboard-wrap">
+            <div id="keyboard" class="keyboard" aria-busy="false"></div>
+            <div class="keyboard-loading hidden" id="keyboardLoading" role="status">Leyendo teclas…</div>
+          </div>
+        </div>
+
+        <aside class="card key-panel" id="keyPanel">
+          <div class="key-empty" id="keyEmpty">
+            <strong>Selecciona una tecla</strong>
+            <p>Haz clic en cualquier tecla del teclado para ver y cambiar su función.</p>
+          </div>
+          <div id="keyDetails" class="hidden">
+            <div id="knobOptions" class="knob-options hidden" role="group" aria-label="Funciones de la rueda">
+              <span class="muted">Función de la rueda</span>
+              <div id="knobActions" class="knob-actions"></div>
+              <p class="hint">En el teclado, Fn + pulsar la rueda alterna entre control de pantalla y volumen.</p>
+            </div>
+            <div class="key-panel-head">
+              <div>
+                <span class="eyebrow">Tecla física</span>
+                <h3 id="selKeyName">—</h3>
+              </div>
+              <span id="selKeySlot" class="chip">—</span>
+            </div>
+
+            <div class="binding">
+              <span class="muted">Función actual</span>
+              <strong id="selCurrent">—</strong>
+              <span id="selType" class="badge">—</span>
+            </div>
+            <div class="binding">
+              <span class="muted">Función original</span>
+              <strong id="selDefault">—</strong>
+            </div>
+
+            <div class="field">
+              <span>Modo de asignación</span>
+              <div class="segmented" id="keyAssignModeGroup">
+                <button type="button" class="active" data-assign-mode="key">Tecla</button>
+                <button type="button" data-assign-mode="combo">Combinación</button>
+                <button type="button" data-assign-mode="macro">Macro</button>
+              </div>
+            </div>
+
+            <div id="keyAssignPaneKey">
+              <div class="capture-row">
+                <button id="captureKeyBtn" type="button" class="ghost small wide-btn">Pulsar una tecla física para capturar…</button>
+              </div>
+              <label class="field">
+                <span>Buscar función</span>
+                <input id="keySearch" type="search" placeholder="Por ejemplo, volumen o A" autocomplete="off" aria-describedby="keySearchHelp">
+              </label>
+              <p id="keySearchHelp" class="search-help" aria-live="polite"></p>
+              <label class="field">
+                <span>Asignar</span>
+                <select id="keyTarget"></select>
+              </label>
+            </div>
+
+            <div id="keyAssignPaneCombo" class="hidden">
+              <div class="field-row">
+                <label class="field">
+                  <span>Modificador 1</span>
+                  <select id="comboMod1">
+                    <option value="224">Ctrl izq</option>
+                    <option value="225">Shift izq</option>
+                    <option value="226">Alt izq</option>
+                    <option value="227">Win izq</option>
+                    <option value="228">Ctrl der</option>
+                    <option value="229">Shift der</option>
+                    <option value="230">Alt der</option>
+                  </select>
+                </label>
+                <label class="field">
+                  <span>Modificador 2 (opcional)</span>
+                  <select id="comboMod2">
+                    <option value="0">Ninguno</option>
+                    <option value="225">Shift izq</option>
+                    <option value="226">Alt izq</option>
+                    <option value="227">Win izq</option>
+                    <option value="224">Ctrl izq</option>
+                  </select>
+                </label>
+              </div>
+              <label class="field">
+                <span>Tecla principal</span>
+                <select id="comboMainKey"></select>
+              </label>
+            </div>
+
+            <div id="keyAssignPaneMacro" class="hidden">
+              <label class="field">
+                <span>Slot de macro</span>
+                <select id="keyMacroSlot"></select>
+              </label>
+              <label class="field">
+                <span>Modo de disparo</span>
+                <select id="keyMacroMode">
+                  <option value="0">Repetir según el contador de la macro</option>
+                  <option value="1">Alternar encendido / apagado al pulsar</option>
+                  <option value="2">Repetir mientras mantengas pulsada la tecla</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="actions vertical">
+              <button id="applyKey" class="primary">Aplicar cambio</button>
+              <button id="resetKey" class="ghost">Restablecer tecla</button>
+              <button id="disableKey" class="ghost danger-text">Desactivar tecla</button>
+            </div>
+
+            <p class="hint">Los cambios se guardan en el perfil y capa seleccionados. La tecla Fn no se puede reasignar.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============================== MACROS ============================== -->
+    <section id="page-macros" class="page">
+      <div class="macros-layout">
+        <aside class="card macro-slots-card">
+          <div class="card-head">
+            <div>
+              <h3>Slots de macros</h3>
+              <p class="muted">50 posiciones en la memoria del teclado</p>
+            </div>
+            <span id="macroNamedCount" class="chip">0 con nombre</span>
+          </div>
+          <div id="macroSlotList" class="macro-slot-list" role="listbox" aria-label="Slots de macros"></div>
+        </aside>
+
+        <div class="card macro-editor-card">
+          <div class="card-head">
+            <div>
+              <h3 id="macroTitle">Slot 1</h3>
+              <p id="macroSubtitle" class="muted">0 eventos · 6 / 256 bytes</p>
+            </div>
+            <span id="macroBytesBadge" class="pill on">6 / 256 B</span>
+          </div>
+
+          <div class="macro-top-controls">
+            <label class="field">
+              <span>Nombre local (se guarda en este equipo)</span>
+              <input id="macroName" type="text" maxlength="40" placeholder="Por ejemplo: Copiar y pegar, Salto doble…">
+            </label>
+            <label class="field">
+              <span>Repeticiones</span>
+              <input id="macroRepeat" type="number" min="1" max="65535" step="1" value="1">
+            </label>
+          </div>
+
+          <div class="macro-toolbar">
+            <button id="macroRecordBtn" type="button" class="primary small">● Grabar secuencia</button>
+            <button id="macroAddKeyBtn" type="button" class="ghost small">+ Tecla (pulsar y soltar)</button>
+            <button id="macroAddClickBtn" type="button" class="ghost small">+ Clic de ratón</button>
+            <button id="macroAddMoveBtn" type="button" class="ghost small">+ Movimiento ratón</button>
+            <button id="macroClearBtn" type="button" class="ghost small danger-text">Vaciar lista</button>
+          </div>
+
+          <div id="macroEventsList" class="macro-events-list" aria-label="Secuencia de eventos de la macro"></div>
+
+          <div class="actions">
+            <button id="macroSaveBtn" type="button" class="primary">Guardar macro en el teclado</button>
+            <button id="macroReadBtn" type="button" class="ghost">Leer del teclado</button>
+          </div>
+          <p class="hint">Después de guardar una macro aquí, ve a <strong>Teclas</strong>, elige una tecla y asígnala en el modo <strong>Macro</strong>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== SETTINGS ============================== -->
+    <section id="page-settings" class="page">
+      <div class="card appearance-card">
+        <div class="card-head">
+          <div>
+            <h3>Apariencia</h3>
+            <p class="muted">Idioma y tema de color de la interfaz.</p>
+          </div>
+          <span id="appearanceStatus" class="muted" role="status">Se aplica al instante</span>
+        </div>
+        <div class="appearance-grid">
+          <label class="field">
+            <span>Idioma</span>
+            <select id="languageSelect">
+              <option value="es">Español</option>
+              <option value="en">English</option>
+            </select>
+            <small class="muted">El idioma se guarda en este equipo.</small>
+          </label>
+          <div class="field">
+            <span>Tema de color</span>
+            <div id="themeOptions" class="theme-options" role="radiogroup" aria-label="Tema de color">
+              <button type="button" class="theme-option active" data-theme-value="grafito" role="radio" aria-checked="true">
+                <span class="theme-swatch theme-swatch--grafito" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span><strong>Grafito</strong><small>Grafito y amarillo</small></span>
+              </button>
+              <button type="button" class="theme-option" data-theme-value="cobalto" role="radio" aria-checked="false">
+                <span class="theme-swatch theme-swatch--cobalto" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span><strong>Cobalto</strong><small>Azul tinta y ámbar</small></span>
+              </button>
+              <button type="button" class="theme-option" data-theme-value="mercurio" role="radio" aria-checked="false">
+                <span class="theme-swatch theme-swatch--mercurio" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span><strong>Mercurio</strong><small>Verde salvia y grafito</small></span>
+              </button>
+            </div>
+            <small class="muted">El tema se guarda en este equipo.</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid2">
+        <div class="card">
+          <div class="card-head">
+            <h3>Rendimiento</h3>
+          </div>
+          <div class="field">
+            <span>Frecuencia de sondeo</span>
+            <div id="rateButtons" class="segmented"></div>
+            <small class="muted">Más Hz = menos latencia, más consumo. El X820 Ultra anuncia hasta 8 kHz según firmware.</small>
+          </div>
+          <label class="field">
+            <span>Debounce <output id="debounceOut">1</output> ms</span>
+            <input type="range" id="debounce" min="0" max="20" step="1" value="1">
+            <small class="muted">Tiempo mínimo entre pulsaciones. 1–3 ms suele ser ideal.</small>
+          </label>
+          <div class="actions">
+            <button id="applyPerf" class="primary">Aplicar rendimiento</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-head">
+            <h3>Perfil y sistema</h3>
+          </div>
+          <label class="field">
+            <span>Perfil activo</span>
+            <select id="profileSelect">
+              <option value="0">Perfil 0</option>
+              <option value="1">Perfil 1</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>Distribución</span>
+            <select id="systemSelect">
+              <option value="win">Windows</option>
+              <option value="mac">macOS</option>
+            </select>
+          </label>
+          <div class="actions">
+            <button id="applyProfile" class="primary">Aplicar</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-head">
+            <h3>Suspensión</h3>
+          </div>
+          <p class="muted">Tiempo en minutos antes de dormir. El modo profundo ahorra más batería pero tarda más en despertar.</p>
+          <div class="field-row">
+            <label class="field"><span>Inalámbrico</span><input type="number" id="sleepBt" min="0" max="1080" step="1"></label>
+            <label class="field"><span>Cable</span><input type="number" id="sleepWired" min="0" max="1080" step="1"></label>
+          </div>
+          <div class="field-row">
+            <label class="field"><span>Profundo inalámbrico</span><input type="number" id="sleepDeepBt" min="0" max="1080" step="1"></label>
+            <label class="field"><span>Profundo cable</span><input type="number" id="sleepDeepWired" min="0" max="1080" step="1"></label>
+          </div>
+          <div class="actions">
+            <button id="applySleep" class="primary">Aplicar suspensión</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-head">
+            <h3>Información</h3>
+          </div>
+          <dl class="kv compact">
+            <div><dt>Producto</dt><dd id="infoProduct">—</dd></div>
+            <div><dt>VID / PID</dt><dd id="infoVidPid">—</dd></div>
+            <div><dt>Versión USB</dt><dd id="infoUsb">—</dd></div>
+            <div><dt>Versión OLED</dt><dd id="infoOled">—</dd></div>
+            <div><dt>Versión flash</dt><dd id="infoFlash">—</dd></div>
+            <div><dt>Sistema</dt><dd id="infoSystem">—</dd></div>
+          </dl>
+        </div>
+      </div>
+
+      <div class="card danger-zone">
+        <div>
+          <h3>Zona de riesgo</h3>
+          <p class="muted">Restablece el teclado a los valores de fábrica. Se pierden perfiles, macros, iluminación y la imagen de la pantalla.</p>
+        </div>
+        <button id="factoryReset" class="danger">Restablecer de fábrica</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>OpenKEY · app local para Attack Shark X820 Ultra</span>
+      <span class="muted">Sin telemetría. Sin Electron. Todo se queda en tu PC.</span>
+    </footer>
+  </main>
+</div>
+
+<div id="toasts" class="toasts"></div>
+
+<dialog id="confirmDialog" class="dialog">
+  <form method="dialog">
+    <h3 id="confirmTitle">¿Seguro?</h3>
+    <p id="confirmText">Esta acción no se puede deshacer.</p>
+    <div class="dialog-actions">
+      <button value="cancel" class="ghost">Cancelar</button>
+      <button value="ok" id="confirmOk" class="danger">Continuar</button>
+    </div>
+  </form>
+</dialog>
+
+<dialog id="gifLimitDialog" class="dialog">
+  <form method="dialog">
+    <h3 id="gifLimitTitle">GIF demasiado largo</h3>
+    <p id="gifLimitText"></p>
+    <div class="gif-limit-options">
+      <button value="compress" class="primary">Comprimir a 60 cuadros</button>
+      <button value="first" class="ghost">Usar los primeros 60</button>
+      <button value="cancel" class="ghost">Cancelar</button>
+    </div>
+  </form>
+</dialog>
+
+<dialog id="gifSizeDialog" class="dialog">
+  <form method="dialog">
+    <h3 id="gifSizeTitle">GIF pesado</h3>
+    <p id="gifSizeText"></p>
+    <div class="gif-limit-options">
+      <button value="compress" class="primary">Comprimir a 1,5 MB</button>
+      <button id="gifSizeFull" value="full" class="ghost">Subir completo (hasta 2 MB)</button>
+      <button value="cancel" class="ghost">Cancelar</button>
+    </div>
+  </form>
+</dialog>
+
+<script src="/i18n.js"></script>
+<script type="module" src="/app.js"></script>
+</body>
+</html>

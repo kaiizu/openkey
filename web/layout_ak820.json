@@ -1,0 +1,1429 @@
+{
+  "width": 773,
+  "height": 299,
+  "keys": [
+    {
+      "code": "AudioVolumeDown",
+      "label": "U-",
+      "x": 721,
+      "y": 0,
+      "w": 17,
+      "h": 52,
+      "type": "knob",
+      "index": 90,
+      "hid": 50391552,
+      "default": [
+        3,
+        0,
+        234,
+        0
+      ]
+    },
+    {
+      "code": "AudioVolumeMute",
+      "label": "Mute",
+      "x": 738,
+      "y": 0,
+      "w": 18,
+      "h": 52,
+      "type": "knob",
+      "index": 84,
+      "hid": 50389504,
+      "default": [
+        3,
+        0,
+        226,
+        0
+      ]
+    },
+    {
+      "code": "AudioVolumeUp",
+      "label": "U+",
+      "x": 756,
+      "y": 0,
+      "w": 17,
+      "h": 52,
+      "type": "knob",
+      "index": 91,
+      "hid": 50391296,
+      "default": [
+        3,
+        0,
+        233,
+        0
+      ]
+    },
+    {
+      "code": "ArrowRight",
+      "label": "→",
+      "x": 719,
+      "y": 258,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 89,
+      "hid": 79,
+      "default": [
+        0,
+        0,
+        79,
+        0
+      ]
+    },
+    {
+      "code": "ArrowDown",
+      "label": "↓",
+      "x": 673,
+      "y": 258,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 83,
+      "hid": 81,
+      "default": [
+        0,
+        0,
+        81,
+        0
+      ]
+    },
+    {
+      "code": "ArrowLeft",
+      "label": "←",
+      "x": 627,
+      "y": 258,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 77,
+      "hid": 80,
+      "default": [
+        0,
+        0,
+        80,
+        0
+      ]
+    },
+    {
+      "code": "Fn",
+      "label": "fn",
+      "x": 481,
+      "y": 250,
+      "w": 48,
+      "h": 40,
+      "type": "key",
+      "index": 65,
+      "hid": 167837696,
+      "default": [
+        10,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "code": "ControlRight",
+      "label": "r_Ctrl",
+      "x": 535,
+      "y": 250,
+      "w": 48,
+      "h": 40,
+      "type": "key",
+      "index": 71,
+      "hid": 228,
+      "default": [
+        0,
+        0,
+        228,
+        0
+      ]
+    },
+    {
+      "code": "Space",
+      "label": "(space)",
+      "x": 163,
+      "y": 250,
+      "w": 312,
+      "h": 40,
+      "type": "key",
+      "index": 41,
+      "hid": 44,
+      "default": [
+        0,
+        0,
+        44,
+        0
+      ]
+    },
+    {
+      "code": "AltLeft",
+      "label": "Alt",
+      "x": 109,
+      "y": 250,
+      "w": 48,
+      "h": 40,
+      "type": "key",
+      "index": 17,
+      "hid": 226,
+      "default": [
+        0,
+        0,
+        226,
+        0
+      ]
+    },
+    {
+      "code": "MetaLeft",
+      "label": "Win",
+      "x": 55,
+      "y": 250,
+      "w": 48,
+      "h": 40,
+      "type": "key",
+      "index": 11,
+      "hid": 227,
+      "default": [
+        0,
+        0,
+        227,
+        0
+      ]
+    },
+    {
+      "code": "ControlLeft",
+      "label": "Ctrl",
+      "x": 1,
+      "y": 250,
+      "w": 48,
+      "h": 40,
+      "type": "key",
+      "index": 5,
+      "hid": 224,
+      "default": [
+        0,
+        0,
+        224,
+        0
+      ]
+    },
+    {
+      "code": "ArrowUp",
+      "label": "↑",
+      "x": 673,
+      "y": 212,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 82,
+      "hid": 82,
+      "default": [
+        0,
+        0,
+        82,
+        0
+      ]
+    },
+    {
+      "code": "ShiftRight",
+      "label": "r_Shift",
+      "x": 560,
+      "y": 204,
+      "w": 99,
+      "h": 40,
+      "type": "key",
+      "index": 76,
+      "hid": 229,
+      "default": [
+        0,
+        0,
+        229,
+        0
+      ]
+    },
+    {
+      "code": "Slash",
+      "label": "/",
+      "x": 514,
+      "y": 204,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 70,
+      "hid": 56,
+      "default": [
+        0,
+        0,
+        56,
+        0
+      ]
+    },
+    {
+      "code": "Period",
+      "label": ".",
+      "x": 468,
+      "y": 204,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 64,
+      "hid": 55,
+      "default": [
+        0,
+        0,
+        55,
+        0
+      ]
+    },
+    {
+      "code": "Comma",
+      "label": ",",
+      "x": 422,
+      "y": 204,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 58,
+      "hid": 54,
+      "default": [
+        0,
+        0,
+        54,
+        0
+      ]
+    },
+    {
+      "code": "KeyM",
+      "label": "M",
+      "x": 376,
+      "y": 204,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 52,
+      "hid": 16,
+      "default": [
+        0,
+        0,
+        16,
+        0
+      ]
+    },
+    {
+      "code": "KeyN",
+      "label": "N",
+      "x": 330,
+      "y": 204,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 46,
+      "hid": 17,
+      "default": [
+        0,
+        0,
+        17,
+        0
+      ]
+    },
+    {
+      "code": "KeyB",
+      "label": "B",
+      "x": 284,
+      "y": 204,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 40,
+      "hid": 5,
+      "default": [
+        0,
+        0,
+        5,
+        0
+      ]
+    },
+    {
+      "code": "KeyV",
+      "label": "V",
+      "x": 238,
+      "y": 204,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 34,
+      "hid": 25,
+      "default": [
+        0,
+        0,
+        25,
+        0
+      ]
+    },
+    {
+      "code": "KeyC",
+      "label": "C",
+      "x": 192,
+      "y": 204,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 28,
+      "hid": 6,
+      "default": [
+        0,
+        0,
+        6,
+        0
+      ]
+    },
+    {
+      "code": "KeyX",
+      "label": "X",
+      "x": 146,
+      "y": 204,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 22,
+      "hid": 27,
+      "default": [
+        0,
+        0,
+        27,
+        0
+      ]
+    },
+    {
+      "code": "KeyZ",
+      "label": "Z",
+      "x": 100,
+      "y": 204,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 16,
+      "hid": 29,
+      "default": [
+        0,
+        0,
+        29,
+        0
+      ]
+    },
+    {
+      "code": "ShiftLeft",
+      "label": "Shift",
+      "x": 1,
+      "y": 204,
+      "w": 93,
+      "h": 40,
+      "type": "key",
+      "index": 4,
+      "hid": 225,
+      "default": [
+        0,
+        0,
+        225,
+        0
+      ]
+    },
+    {
+      "code": "PageDown",
+      "label": "Page\nDown",
+      "x": 727,
+      "y": 158,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 87,
+      "hid": 78,
+      "default": [
+        0,
+        0,
+        78,
+        0
+      ]
+    },
+    {
+      "code": "Enter",
+      "label": "Enter",
+      "x": 585,
+      "y": 158,
+      "w": 104,
+      "h": 40,
+      "type": "key",
+      "index": 81,
+      "hid": 40,
+      "default": [
+        0,
+        0,
+        40,
+        0
+      ]
+    },
+    {
+      "code": "Quote",
+      "label": "'",
+      "x": 539,
+      "y": 158,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 69,
+      "hid": 52,
+      "default": [
+        0,
+        0,
+        52,
+        0
+      ]
+    },
+    {
+      "code": "Semicolon",
+      "label": ";",
+      "x": 493,
+      "y": 158,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 63,
+      "hid": 51,
+      "default": [
+        0,
+        0,
+        51,
+        0
+      ]
+    },
+    {
+      "code": "KeyL",
+      "label": "L",
+      "x": 447,
+      "y": 158,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 57,
+      "hid": 15,
+      "default": [
+        0,
+        0,
+        15,
+        0
+      ]
+    },
+    {
+      "code": "KeyK",
+      "label": "K",
+      "x": 401,
+      "y": 158,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 51,
+      "hid": 14,
+      "default": [
+        0,
+        0,
+        14,
+        0
+      ]
+    },
+    {
+      "code": "KeyJ",
+      "label": "J",
+      "x": 355,
+      "y": 158,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 45,
+      "hid": 13,
+      "default": [
+        0,
+        0,
+        13,
+        0
+      ]
+    },
+    {
+      "code": "KeyH",
+      "label": "H",
+      "x": 309,
+      "y": 158,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 39,
+      "hid": 11,
+      "default": [
+        0,
+        0,
+        11,
+        0
+      ]
+    },
+    {
+      "code": "KeyG",
+      "label": "G",
+      "x": 263,
+      "y": 158,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 33,
+      "hid": 10,
+      "default": [
+        0,
+        0,
+        10,
+        0
+      ]
+    },
+    {
+      "code": "KeyF",
+      "label": "F",
+      "x": 217,
+      "y": 158,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 27,
+      "hid": 9,
+      "default": [
+        0,
+        0,
+        9,
+        0
+      ]
+    },
+    {
+      "code": "KeyD",
+      "label": "D",
+      "x": 171,
+      "y": 158,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 21,
+      "hid": 7,
+      "default": [
+        0,
+        0,
+        7,
+        0
+      ]
+    },
+    {
+      "code": "KeyS",
+      "label": "S",
+      "x": 125,
+      "y": 158,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 15,
+      "hid": 22,
+      "default": [
+        0,
+        0,
+        22,
+        0
+      ]
+    },
+    {
+      "code": "KeyA",
+      "label": "A",
+      "x": 79,
+      "y": 158,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 9,
+      "hid": 4,
+      "default": [
+        0,
+        0,
+        4,
+        0
+      ]
+    },
+    {
+      "code": "CapsLock",
+      "label": "Caps Lock",
+      "x": 1,
+      "y": 158,
+      "w": 72,
+      "h": 40,
+      "type": "key",
+      "index": 3,
+      "hid": 57,
+      "default": [
+        0,
+        0,
+        57,
+        0
+      ]
+    },
+    {
+      "code": "PageUp",
+      "label": "Page\nUp",
+      "x": 727,
+      "y": 112,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 86,
+      "hid": 75,
+      "default": [
+        0,
+        0,
+        75,
+        0
+      ]
+    },
+    {
+      "code": "Backslash",
+      "label": "\\",
+      "x": 625,
+      "y": 112,
+      "w": 64,
+      "h": 40,
+      "type": "key",
+      "index": 80,
+      "hid": 49,
+      "default": [
+        0,
+        0,
+        49,
+        0
+      ]
+    },
+    {
+      "code": "BracketRight",
+      "label": "]",
+      "x": 579,
+      "y": 112,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 74,
+      "hid": 48,
+      "default": [
+        0,
+        0,
+        48,
+        0
+      ]
+    },
+    {
+      "code": "BracketLeft",
+      "label": "[",
+      "x": 533,
+      "y": 112,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 68,
+      "hid": 47,
+      "default": [
+        0,
+        0,
+        47,
+        0
+      ]
+    },
+    {
+      "code": "KeyP",
+      "label": "P",
+      "x": 487,
+      "y": 112,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 62,
+      "hid": 19,
+      "default": [
+        0,
+        0,
+        19,
+        0
+      ]
+    },
+    {
+      "code": "KeyO",
+      "label": "O",
+      "x": 441,
+      "y": 112,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 56,
+      "hid": 18,
+      "default": [
+        0,
+        0,
+        18,
+        0
+      ]
+    },
+    {
+      "code": "KeyI",
+      "label": "I",
+      "x": 395,
+      "y": 112,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 50,
+      "hid": 12,
+      "default": [
+        0,
+        0,
+        12,
+        0
+      ]
+    },
+    {
+      "code": "KeyU",
+      "label": "U",
+      "x": 349,
+      "y": 112,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 44,
+      "hid": 24,
+      "default": [
+        0,
+        0,
+        24,
+        0
+      ]
+    },
+    {
+      "code": "KeyY",
+      "label": "Y",
+      "x": 303,
+      "y": 112,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 38,
+      "hid": 28,
+      "default": [
+        0,
+        0,
+        28,
+        0
+      ]
+    },
+    {
+      "code": "KeyT",
+      "label": "T",
+      "x": 257,
+      "y": 112,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 32,
+      "hid": 23,
+      "default": [
+        0,
+        0,
+        23,
+        0
+      ]
+    },
+    {
+      "code": "KeyR",
+      "label": "R",
+      "x": 211,
+      "y": 112,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 26,
+      "hid": 21,
+      "default": [
+        0,
+        0,
+        21,
+        0
+      ]
+    },
+    {
+      "code": "KeyE",
+      "label": "E",
+      "x": 165,
+      "y": 112,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 20,
+      "hid": 8,
+      "default": [
+        0,
+        0,
+        8,
+        0
+      ]
+    },
+    {
+      "code": "KeyW",
+      "label": "W",
+      "x": 119,
+      "y": 112,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 14,
+      "hid": 26,
+      "default": [
+        0,
+        0,
+        26,
+        0
+      ]
+    },
+    {
+      "code": "KeyQ",
+      "label": "Q",
+      "x": 73,
+      "y": 112,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 8,
+      "hid": 20,
+      "default": [
+        0,
+        0,
+        20,
+        0
+      ]
+    },
+    {
+      "code": "Tab",
+      "label": "Tab",
+      "x": 1,
+      "y": 112,
+      "w": 66,
+      "h": 40,
+      "type": "key",
+      "index": 2,
+      "hid": 43,
+      "default": [
+        0,
+        0,
+        43,
+        0
+      ]
+    },
+    {
+      "code": "Home",
+      "label": "Home",
+      "x": 727,
+      "y": 66,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 85,
+      "hid": 74,
+      "default": [
+        0,
+        0,
+        74,
+        0
+      ]
+    },
+    {
+      "code": "Backspace",
+      "label": "BackSpace",
+      "x": 599,
+      "y": 66,
+      "w": 90,
+      "h": 40,
+      "type": "key",
+      "index": 79,
+      "hid": 42,
+      "default": [
+        0,
+        0,
+        42,
+        0
+      ]
+    },
+    {
+      "code": "Equal",
+      "label": "=",
+      "x": 553,
+      "y": 66,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 73,
+      "hid": 46,
+      "default": [
+        0,
+        0,
+        46,
+        0
+      ]
+    },
+    {
+      "code": "Minus",
+      "label": "-",
+      "x": 507,
+      "y": 66,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 67,
+      "hid": 45,
+      "default": [
+        0,
+        0,
+        45,
+        0
+      ]
+    },
+    {
+      "code": "Digit0",
+      "label": "0",
+      "x": 461,
+      "y": 66,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 61,
+      "hid": 39,
+      "default": [
+        0,
+        0,
+        39,
+        0
+      ]
+    },
+    {
+      "code": "Digit9",
+      "label": "9",
+      "x": 415,
+      "y": 66,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 55,
+      "hid": 38,
+      "default": [
+        0,
+        0,
+        38,
+        0
+      ]
+    },
+    {
+      "code": "Digit8",
+      "label": "8",
+      "x": 369,
+      "y": 66,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 49,
+      "hid": 37,
+      "default": [
+        0,
+        0,
+        37,
+        0
+      ]
+    },
+    {
+      "code": "Digit7",
+      "label": "7",
+      "x": 323,
+      "y": 66,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 43,
+      "hid": 36,
+      "default": [
+        0,
+        0,
+        36,
+        0
+      ]
+    },
+    {
+      "code": "Digit6",
+      "label": "6",
+      "x": 277,
+      "y": 66,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 37,
+      "hid": 35,
+      "default": [
+        0,
+        0,
+        35,
+        0
+      ]
+    },
+    {
+      "code": "Digit5",
+      "label": "5",
+      "x": 231,
+      "y": 66,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 31,
+      "hid": 34,
+      "default": [
+        0,
+        0,
+        34,
+        0
+      ]
+    },
+    {
+      "code": "Digit4",
+      "label": "4",
+      "x": 185,
+      "y": 66,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 25,
+      "hid": 33,
+      "default": [
+        0,
+        0,
+        33,
+        0
+      ]
+    },
+    {
+      "code": "Digit3",
+      "label": "3",
+      "x": 139,
+      "y": 66,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 19,
+      "hid": 32,
+      "default": [
+        0,
+        0,
+        32,
+        0
+      ]
+    },
+    {
+      "code": "Digit2",
+      "label": "2",
+      "x": 93,
+      "y": 66,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 13,
+      "hid": 31,
+      "default": [
+        0,
+        0,
+        31,
+        0
+      ]
+    },
+    {
+      "code": "Digit1",
+      "label": "1",
+      "x": 47,
+      "y": 66,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 7,
+      "hid": 30,
+      "default": [
+        0,
+        0,
+        30,
+        0
+      ]
+    },
+    {
+      "code": "Backquote",
+      "label": "`",
+      "x": 1,
+      "y": 66,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 1,
+      "hid": 53,
+      "default": [
+        0,
+        0,
+        53,
+        0
+      ]
+    },
+    {
+      "code": "Delete",
+      "label": "Delete",
+      "x": 649,
+      "y": 11,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 78,
+      "hid": 76,
+      "default": [
+        0,
+        0,
+        76,
+        0
+      ]
+    },
+    {
+      "code": "F12",
+      "label": "F12",
+      "x": 592,
+      "y": 11,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 72,
+      "hid": 69,
+      "default": [
+        0,
+        0,
+        69,
+        0
+      ]
+    },
+    {
+      "code": "F11",
+      "label": "F11",
+      "x": 546,
+      "y": 11,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 66,
+      "hid": 68,
+      "default": [
+        0,
+        0,
+        68,
+        0
+      ]
+    },
+    {
+      "code": "F10",
+      "label": "F10",
+      "x": 500,
+      "y": 11,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 60,
+      "hid": 67,
+      "default": [
+        0,
+        0,
+        67,
+        0
+      ]
+    },
+    {
+      "code": "F9",
+      "label": "F9",
+      "x": 454,
+      "y": 11,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 54,
+      "hid": 66,
+      "default": [
+        0,
+        0,
+        66,
+        0
+      ]
+    },
+    {
+      "code": "F8",
+      "label": "F8",
+      "x": 394,
+      "y": 11,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 48,
+      "hid": 65,
+      "default": [
+        0,
+        0,
+        65,
+        0
+      ]
+    },
+    {
+      "code": "F7",
+      "label": "F7",
+      "x": 348,
+      "y": 11,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 42,
+      "hid": 64,
+      "default": [
+        0,
+        0,
+        64,
+        0
+      ]
+    },
+    {
+      "code": "F6",
+      "label": "F6",
+      "x": 302,
+      "y": 11,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 36,
+      "hid": 63,
+      "default": [
+        0,
+        0,
+        63,
+        0
+      ]
+    },
+    {
+      "code": "F5",
+      "label": "F5",
+      "x": 256,
+      "y": 11,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 30,
+      "hid": 62,
+      "default": [
+        0,
+        0,
+        62,
+        0
+      ]
+    },
+    {
+      "code": "F4",
+      "label": "F4",
+      "x": 196,
+      "y": 11,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 24,
+      "hid": 61,
+      "default": [
+        0,
+        0,
+        61,
+        0
+      ]
+    },
+    {
+      "code": "F3",
+      "label": "F3",
+      "x": 150,
+      "y": 11,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 18,
+      "hid": 60,
+      "default": [
+        0,
+        0,
+        60,
+        0
+      ]
+    },
+    {
+      "code": "F2",
+      "label": "F2",
+      "x": 104,
+      "y": 11,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 12,
+      "hid": 59,
+      "default": [
+        0,
+        0,
+        59,
+        0
+      ]
+    },
+    {
+      "code": "F1",
+      "label": "F1",
+      "x": 58,
+      "y": 11,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 6,
+      "hid": 58,
+      "default": [
+        0,
+        0,
+        58,
+        0
+      ]
+    },
+    {
+      "code": "Escape",
+      "label": "Esc",
+      "x": 1,
+      "y": 11,
+      "w": 40,
+      "h": 40,
+      "type": "key",
+      "index": 0,
+      "hid": 41,
+      "default": [
+        0,
+        0,
+        41,
+        0
+      ]
+    },
+    {
+      "code": "Knob",
+      "label": "Knob",
+      "x": 721,
+      "y": 0,
+      "w": 52,
+      "h": 52,
+      "type": "knob-group",
+      "index": null,
+      "hid": null,
+      "default": null
+    }
+  ]
+}

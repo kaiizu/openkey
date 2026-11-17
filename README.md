@@ -11,7 +11,6 @@
 
 <p align="center">
   <a href="https://github.com/kaiizu/openkey/releases/latest"><img alt="Release" src="https://img.shields.io/github/v/release/kaiizu/openkey?style=flat-square&label=release"></a>
-  <a href="https://github.com/kaiizu/openkey/actions/workflows/checks.yml"><img alt="Checks" src="https://github.com/kaiizu/openkey/actions/workflows/checks.yml/badge.svg"></a>
   <img alt="Windows" src="https://img.shields.io/badge/Windows-10%2F11-0078D4?style=flat-square&logo=windows&logoColor=white">
   <img alt="Python" src="https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat-square&logo=python&logoColor=white">
   <img alt="UI" src="https://img.shields.io/badge/UI-vanilla%20JS-F7DF1E?style=flat-square&logo=javascript&logoColor=black">
